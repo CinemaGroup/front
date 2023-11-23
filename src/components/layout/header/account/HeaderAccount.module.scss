@@ -1,0 +1,60 @@
+.wrapper {
+	@apply relative 600:hidden;
+	margin-left: 38px;
+}
+.button {
+	@apply relative rounded-full;
+	width: 35px;
+	height: 35px;
+
+	& > img {
+		@apply image-like-bg rounded-full;
+	}
+}
+.bar {
+	@apply inline-block absolute left-0 z-1 bg-gray-700 opacity-0 pointer-events-none invisible transition-opacity duration-200 text-base;
+	border-radius: 12px;
+	padding: 67px 45px 30px;
+	top: 75px;
+	transform: translateX(calc(-50% + 35px / 2));
+
+	&.show {
+		@apply opacity-100 pointer-events-auto visible;
+	}
+
+	&::before {
+		@apply w-0 h-0 absolute left-0 right-0 mx-auto;
+		content: '';
+		border-left: 23px solid transparent;
+		border-right: 23px solid transparent;
+		border-bottom: 20px solid #313131;
+		top: -20px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.bar {
+		font-size: 17px;
+		padding: 40px 45px 30px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.bar {
+		@apply text-small;
+		padding: 35px 33px 15px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.button {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.wrapper {
+		margin-left: 30px;
+	}
+}

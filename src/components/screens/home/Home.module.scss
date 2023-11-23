@@ -1,0 +1,116 @@
+.wrapper {
+	@apply animate-fade;
+}
+.fill {
+	@apply w-full;
+	max-width: 850px;
+	margin: 150px auto 0;
+}
+.search {
+	margin: 70px 0 60px;
+	padding: 0px 29px 0px 18px;
+}
+
+@media (max-width: 1600px) {
+	.fill {
+		margin: 110px auto 0;
+	}
+	.search {
+		margin: 50px 0 40px;
+	}
+}
+
+@media (max-width: 1500px) {
+	.fill {
+		margin: 100px auto 0;
+	}
+}
+
+@media (max-width: 1200px) {
+	.search {
+		margin: 50px 0 40px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.fill {
+		margin: 90px auto 0;
+	}
+	.search {
+		margin: 40px 0 40px;
+	}
+}
+
+@media (max-width: 900px) {
+	.types {
+		@apply justify-center;
+
+		> div {
+			@apply w-full;
+			max-width: 265px;
+		}
+	}
+}
+
+@media (max-width: 850px) {
+	.fill {
+		margin: 70px auto 0;
+	}
+	.search {
+		margin: 35px 0 35px;
+	}
+}
+
+@media (max-width: 600px) {
+	.fill {
+		margin: 90px auto 0;
+	}
+	.search {
+		margin: 32px 0 34px;
+	}
+	.types {
+		@apply flex-col justify-start;
+		
+		> div {
+			@apply w-full;
+			max-width: 320px;
+			border-radius: 8px;
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.fill {
+		margin: 85px auto 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.fill {
+		margin: 72px 0 0;
+	}
+	.search {
+		@apply text-small;
+		padding: 0px 18px 0px 18px;
+
+		svg {
+			@apply text-3lg;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.search {
+		@apply text-extra-small;
+		margin: 15px 0 15px;
+	}
+}
+
+@media (max-width: 400px) {
+	.fill {
+		max-width: 320px;
+	}
+	.types {
+		gap: 11px;
+	}
+}

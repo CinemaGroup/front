@@ -1,0 +1,21 @@
+.container {
+	max-width: 1670px;
+	padding: 0 25px;
+	@apply w-full mx-auto;
+}
+
+@media(max-width: 1750px){
+	.container{
+		max-width: 90%;
+	}
+}
+@media (max-width: 1360px) {
+	.container{
+		max-width: none;
+	}
+}
+@media (max-width: 400px) {
+	.container{
+		padding: 0 27px;
+	}
+}

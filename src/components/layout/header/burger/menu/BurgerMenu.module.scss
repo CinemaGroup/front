@@ -1,0 +1,38 @@
+.language{
+	@apply hidden w-fit ml-auto mb-4 600:block;
+}
+.search {
+	@apply mb-6;
+	padding: 0px 17px;
+
+	> input {
+		@apply 1600:h-11 1200:h-10 1200:text-small;
+	}
+}
+.menu{
+	@apply flex flex-col gap-6;
+}
+
+@media(max-width: 1200px){
+	.search {
+		> input {
+			@apply h-10 text-small;
+		}
+	}
+}
+@media(max-width: 800px){
+	.menu{
+		@apply gap-5;
+	}
+	.search {
+		> input {
+			@apply h-9 text-extra-small;
+		}
+
+		> button {
+			> svg{
+				@apply text-2lg;
+			}
+		}
+	}
+}

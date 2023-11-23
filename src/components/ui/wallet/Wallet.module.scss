@@ -1,0 +1,32 @@
+.wallet {
+	@apply flex items-center gap-9;
+}
+.balance,
+.bonus {
+	@apply flex items-center gap-2 text-base;
+
+	> svg {
+		@apply text-2lg;
+	}
+}
+.amount {
+	@apply ml-1;
+}
+
+@media (max-width: 1600px) {
+	.balance,
+	.bonus {
+		@apply text-small;
+	}
+}
+@media (max-width: 1000px) {
+	.wallet {
+		gap: 30px;
+	}
+}
+@media (max-width: 800px) {
+  .balance,
+	.bonus {
+		@apply hidden;
+	}
+}

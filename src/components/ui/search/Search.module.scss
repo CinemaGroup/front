@@ -1,0 +1,16 @@
+.search {
+	@apply flex items-center justify-between border border-solid border-gray-600 rounded-extra-small animate-fade;
+}
+.field {
+	@apply bg-transparent text-gray-600 outline-border-none h-12;
+	width: calc(100% - 30px);
+
+	&::placeholder {
+		@apply text-gray-600;
+	}
+}
+.button {
+	> svg {
+		@apply text-4lg text-gray-600;
+	}
+}

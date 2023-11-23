@@ -1,0 +1,28 @@
+.favorites {
+	@apply relative text-6lg 600:hidden;
+	margin-left: 38px;
+}
+.count {
+	@apply absolute bg-yellow-500 flex items-center justify-center rounded-full text-gray-800 leading-none;
+	font-size: 11px;
+	width: 15px;
+	right: -3px;
+	top: 0px;
+	height: 15px;
+}
+
+@media (max-width: 1500px) {
+	.favorites {
+		@apply text-4lg;
+	}
+	.count {
+		@apply w-3 h-3;
+		font-size: 9px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.favorites {
+		margin-left: 30px;
+	}
+}

@@ -1,0 +1,6 @@
+.layout {
+	@apply min-h-screen flex flex-col justify-between;
+}
+.main{
+	@apply flex-1 flex flex-col;
+}

@@ -1,0 +1,82 @@
+.box {
+	@apply text-center mx-auto w-full;
+	max-width: 720px;
+}
+.heading {
+	@apply leading-none mb-2;
+}
+.subHeading {
+	@apply subtitle;
+}
+
+@media (max-width: 1750px) {
+	.heading {
+		font-size: 50px;
+	}
+	.subHeading {
+		font-size: 27px;
+		line-height: 30px;
+	}
+}
+
+@media (max-width: 1600px) {
+	.box{
+		max-width: 670px;
+	}
+	.heading {
+		font-size: 43px;
+	}
+	.subHeading {
+		font-size: 23px;
+		line-height: 27px;
+	}
+}
+
+@media (max-width: 1360px) {
+	.box {
+    max-width: 600px;
+  }
+	.heading {
+		font-size: 42px;
+	}
+	.subHeading {
+		line-height: 25px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.heading {
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 850px) {
+	.heading {
+		font-size: 38px;
+	}
+	.subHeading {
+		font-size: 21px;
+		line-height: 22px;
+	}
+}
+
+@media (max-width: 600px) {
+	.box {
+		@apply text-left;
+  }
+	.heading {
+		font-size: 36px;
+		max-width: 240px;
+	}
+	.subHeading {
+		@apply text-small;
+		max-width: 210px;
+		line-height: 19px;
+	}
+}
+
+@media (max-width: 400px) {
+	.heading {
+		font-size: 30px;
+	}
+}

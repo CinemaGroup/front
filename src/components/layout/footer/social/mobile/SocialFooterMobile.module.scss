@@ -1,0 +1,46 @@
+.menu {
+	@apply hidden 600:flex-center-between;
+}
+.link {
+	> img {
+		@apply mx-auto w-6;
+	}
+	> svg {
+		@apply mx-auto text-2lg;
+	}
+}
+.label {
+	@apply block text-extra-small mt-2;
+	max-width: 66px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media (max-width: 500px) {
+	.link {
+		> img {
+			max-height: 24px;
+		}
+	}
+	.label {
+		font-size: 13px;
+		max-width: 57px;
+	}
+}
+
+@media (max-width: 400px) {
+	.link {
+		> svg {
+			@apply text-lg;
+		}
+
+		> img {
+			max-width: 22px;
+			max-height: 23px;
+		}
+	}
+	.label {
+		font-size: 13px;
+		max-width: 57px;
+	}
+}

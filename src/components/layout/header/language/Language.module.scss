@@ -1,0 +1,13 @@
+.language {
+	@apply flex items-center text-base 1600:text-small;
+
+	img {
+		@apply w-5 mr-2;
+	}
+}
+
+@media (max-width: 700px) {
+	.language {
+		@apply text-extra-small;
+	}
+}

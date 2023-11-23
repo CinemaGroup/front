@@ -1,0 +1,38 @@
+.header {
+	@apply animate-fade 600:bg-gray-900 600:z-2 600:fixed 600:left-0 600:right-0 600:top-0 600:w-full;
+}
+.language {
+	@apply 600:hidden;
+	margin-left: 38px;
+}
+.fill {
+	@apply flex-center-between pt-9 text-small 700:text-extra-small 600:py-3;
+}
+.menu {
+	@apply flex items-center;
+}
+.logo {
+	@apply 600:hidden;
+}
+.mobileLogo {
+	width: 180px;
+	@apply hidden 600:block;
+}
+
+@media (max-width: 1600px) {
+	.logo {
+		& > img {
+			width: 135px;
+		}
+	}
+}
+@media (max-width: 1500px) {
+	.logo img {
+		width: 120px;
+	}
+}
+@media (max-width: 1000px) {
+	.language {
+		margin-left: 30px;
+	}
+}

@@ -1,0 +1,36 @@
+.wrapper {
+	@apply mb-10;
+}
+.menu {
+	@apply flex items-center gap-4 600:hidden;
+}
+.item {
+	@apply flex;
+}
+.link {
+	> svg {
+		@apply text-2lg;
+	}
+}
+.label {
+	font-size: 15px;
+}
+
+@media (max-width: 850px) {
+	.menu {
+		@apply justify-center;
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapper {
+		@apply z-2 fixed left-0 bottom-0 right-0 w-full bg-gray-950 m-0;
+		padding: 10px 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.wrapper {
+		padding: 10px 0px 6px;
+	}
+}
