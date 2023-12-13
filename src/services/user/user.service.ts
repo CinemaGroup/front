@@ -6,4 +6,8 @@ export const UserService = {
 	async getProfile() {
 		return instance.get<IFullUser>(getUsersUrl('/profile'))
 	},
+
+	async toggleFavorite(productId: string | number) {
+		return instance.patch<IFullUser>(getUsersUrl(`/profile/favorites/${productId}`))
+	},
 }

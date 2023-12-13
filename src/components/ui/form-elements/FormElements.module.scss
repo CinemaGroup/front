@@ -1,5 +1,5 @@
 .field {
-	@apply w-full flex flex-col gap-1;
+	@apply w-full flex flex-col gap-3;
 }
 .label {
 	@apply pointer-events-none;
@@ -15,11 +15,14 @@
 	font-size: 13px;
 }
 .button {
-	&.light {
-		@apply btn-light;
-	}
+	@apply flex items-center gap-3 font-RoadRadio leading-none rounded-medium transition-colors;
+	font-size: 19px;
+	padding: 15px 20px;
 
+	&.light {
+		@apply text-gray-900 bg-gray-200;
+	}
 	&.dark {
-		@apply btn-dark;
+		@apply text-white bg-gray-700;
 	}
 }

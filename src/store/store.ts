@@ -9,13 +9,16 @@ import {
 	REHYDRATE,
 	persistStore,
 } from 'redux-persist'
+import { filesFiltersSlice } from './filters/files/files-filters.slice'
+import { productsFiltersSlice } from './filters/products/products-filters.slice'
 import { userSlice } from './user/user.slice'
 
 const isClient = typeof window !== 'undefined'
 
 const combinedReducers = combineReducers({
 	user: userSlice.reducer,
-	// filters: filtersSlice.reducer,
+	filesFilters: filesFiltersSlice.reducer,
+	productsFilters: productsFiltersSlice.reducer,
 	toastr: toastrReducer,
 })
 

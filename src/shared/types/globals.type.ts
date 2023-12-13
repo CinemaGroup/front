@@ -1,7 +1,7 @@
 import * as CiIcons from 'react-icons/ci'
 import * as MaterialIcons from 'react-icons/md'
 import * as PiIcons from 'react-icons/pi'
-import { IImage } from '../interfaces/globals.interface'
+import { IImage } from '../interfaces/global.interface'
 
 export type TypeIcon =
 	| keyof typeof MaterialIcons

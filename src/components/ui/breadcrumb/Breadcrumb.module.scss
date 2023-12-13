@@ -1,0 +1,24 @@
+.wrapper {
+	@apply font-Inter flex gap-4 items-center;
+	font-size: 13px;
+}
+.item {
+	& + & {
+		@apply relative pl-9;
+
+		&::before {
+			@apply absolute left-0;
+			content: '';
+			width: 21px;
+			height: 1px;
+			background-color: #888888;
+			top: 50%;
+		}
+	}
+}
+.last {
+	@apply pointer-events-none cursor-default;
+	color: #888888;
+}
+.separator {
+}

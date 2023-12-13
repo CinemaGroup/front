@@ -12,8 +12,6 @@ export const useOutside = (initialIsVisible: boolean): TypeOut => {
 	const ref = useRef<HTMLElement>(null)
 	const buttonRef = useRef<HTMLElement>(null)
 
-	console.log(isShow)
-
 	const handleClickOutside = (event: any) => {
 		if (
 			ref.current &&

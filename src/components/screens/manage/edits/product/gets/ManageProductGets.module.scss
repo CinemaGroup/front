@@ -1,0 +1,31 @@
+.getsWrapper {
+	@apply flex flex-col items-start gap-10;
+}
+.gets{
+	@apply flex flex-col gap-5 w-full;
+}
+.getsItems{
+	@apply w-full;
+}
+.getsFill {
+	@apply flex items-start flex-wrap gap-8;
+}
+.button {
+	@apply text-small;
+	padding: 12px 16px;
+
+	> svg {
+		@apply text-2lg;
+	}
+
+	&.margin{
+		@apply mt-5;
+	}
+}
+.subtitle {
+	@apply text-white text-lg font-medium mb-3;
+}
+.field,
+.file {
+	max-width: calc(50% - 16px);
+}

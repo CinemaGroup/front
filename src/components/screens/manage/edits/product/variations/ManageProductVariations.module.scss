@@ -1,0 +1,58 @@
+.variationsWrapper{
+	@apply flex flex-col items-start;
+}
+.variations {
+	@apply mt-5 flex flex-col items-start gap-10;
+}
+.variationsInner{
+	@apply flex flex-col items-start gap-20;
+}
+.variationsFill {
+	@apply w-full flex flex-wrap gap-8;
+}
+.variationFill {
+	@apply w-full flex flex-wrap gap-8;
+}
+.variation{
+	@apply w-full flex flex-wrap gap-4;
+}
+.field {
+	max-width: calc(50% - 16px);
+}
+.file {
+	@apply w-full;
+	max-width: calc(50% - 16px);
+}
+.servicesWrapper{
+	@apply mt-5 mb-10 flex flex-col items-start gap-5 w-full;
+}
+.services {
+	@apply flex flex-col items-start gap-5 w-full;
+}
+.service {
+	@apply pl-10 w-full;
+}
+.serviceFill {
+	@apply flex items-start gap-8;
+}
+.full {
+	max-width: 100%;
+}
+.subtitle {
+	@apply text-white text-lg font-medium mb-3;
+}
+.button {
+	@apply text-small;
+	padding: 12px 16px;
+
+	> svg {
+		@apply text-2lg;
+	}
+
+	&.margin{
+		@apply mt-5;
+	}
+}
+.hidden{
+	display: none;
+}

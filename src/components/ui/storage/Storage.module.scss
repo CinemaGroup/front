@@ -1,0 +1,123 @@
+.storage {
+	@apply h-full w-full flex items-start gap-20;
+}
+.bar {
+	@apply h-full flex flex-col justify-between gap-10 items-start;
+}
+.folders {
+	@apply flex flex-col gap-5;
+}
+.folder {
+	@apply flex items-center gap-5 justify-between;
+}
+.folderBtn {
+	@apply relative flex items-center gap-3 whitespace-nowrap text-small;
+
+	> svg {
+		@apply text-lg;
+	}
+
+	&.active {
+		@apply text-white;
+	}
+}
+.deleteFolder {
+	> svg {
+		@apply text-2lg;
+	}
+}
+.filesWrapper {
+	@apply h-full w-full;
+}
+.files {
+	@apply w-full flex flex-wrap gap-5;
+}
+.file {
+	@apply relative w-full h-fit;
+	width: calc(100% / 10 - 18px);
+}
+.fileBtn {
+	@apply flex flex-col gap-2 justify-between w-full h-full;
+}
+.filePreview {
+	@apply w-full relative;
+	aspect-ratio: 1 / 1;
+}
+.remove {
+	@apply p-2 bg-gray-900 flex items-center justify-center rounded-full absolute right-0 top-0;
+
+	> svg {
+		font-size: 21px;
+	}
+}
+.name {
+	@apply w-full p-1.5 bg-gray-600 text-extra-small text-ellipsis whitespace-nowrap overflow-hidden;
+}
+.addFolder {
+	@apply text-small whitespace-nowrap;
+	pad: 10px 14px;
+}
+.directory {
+	@apply relative z-3 w-full h-fit bg-gray-200 p-10 rounded-medium transition-all duration-700 opacity-0;
+	max-width: 400px;
+	transform: translateY(-30%);
+}
+.overlay {
+	@apply w-full h-full fixed top-0 bottom-0 left-0 right-0 z-2 bg-black/75 flex justify-center items-start transition-all duration-500 invisible opacity-0;
+}
+.directoryOverlay {
+	&.show {
+		@apply visible opacity-100;
+
+		.directory {
+			@apply opacity-100;
+			transform: translateY(50px);
+		}
+	}
+}
+.directoryFill {
+	@apply flex flex-col items-center gap-4;
+}
+.form {
+	@apply w-full flex flex-col gap-4 items-center;
+}
+.close {
+	@apply absolute right-5 top-5 text-3lg text-gray-700;
+}
+.heading {
+	@apply text-gray-900 text-center text-lg;
+}
+.createDirectory {
+	@apply text-small;
+	padding: 12px 20px;
+}
+.selectOverlay {
+	&.show {
+		@apply visible opacity-100;
+
+		.select {
+			@apply opacity-100;
+			transform: translateY(50px);
+		}
+	}
+}
+.select {
+	@apply relative z-3 w-full h-fit bg-gray-200 p-10 rounded-medium transition-all duration-700 opacity-0;
+	max-width: 400px;
+	transform: translateY(-30%);
+}
+.selectFill {
+	@apply flex flex-col items-center gap-5;
+}
+.selectFolders {
+	@apply flex flex-col items-start gap-3;
+}
+.selectFolder {
+	> button {
+		@apply flex items-center gap-3 text-gray-900 font-medium;
+
+		> svg {
+			@apply text-lg;
+		}
+	}
+}

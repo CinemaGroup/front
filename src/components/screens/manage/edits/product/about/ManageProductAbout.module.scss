@@ -1,0 +1,31 @@
+.aboutWrapper {
+	@apply flex flex-col items-start gap-10;
+}
+.about{
+	@apply flex flex-col items-start gap-5 w-full;
+}
+.aboutItems{
+	@apply w-full pl-10;
+}
+.aboutFill {
+	@apply flex items-start flex-wrap gap-8;
+}
+.button {
+	@apply text-small;
+	padding: 12px 16px;
+
+	> svg {
+		@apply text-2lg;
+	}
+
+	&.margin{
+		@apply mt-5;
+	}
+}
+.subtitle {
+	@apply text-white text-lg font-medium mb-3;
+}
+.field,
+.editor {
+	max-width: calc(50% - 16px);
+}

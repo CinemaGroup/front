@@ -1,0 +1,29 @@
+.wrapper {
+	@apply flex flex-col gap-3 w-full border-0 animate-fade;
+}
+.label {
+	@apply pointer-events-none;
+	font-size: 15px;
+}
+.toolbar {
+	@apply outline-border-none rounded-t-lg mb-0 bg-gray-600 bg-opacity-40 p-3;
+
+	> div {
+		@apply m-0;
+
+		> div {
+			@apply outline-border-none shadow-none transition-colors border-gray-500 bg-gray-500 hover:bg-gray-300 mx-1.5;
+		}
+	}
+}
+.editor {
+	@apply border rounded-b-lg border-gray-700 px-4 text-gray-500 overflow-auto;
+
+	> div {
+		@apply h-96;
+	}
+}
+.error{
+	@apply text-red-300 font-light;
+	font-size: 13px;
+}

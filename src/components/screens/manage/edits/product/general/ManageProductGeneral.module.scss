@@ -1,0 +1,11 @@
+.general {
+	@apply mt-5 flex flex-wrap gap-8;
+}
+.field,
+.select {
+	max-width: calc(50% - 16px);
+}
+.file {
+	@apply w-full;
+	max-width: calc(50% - 20px);
+}

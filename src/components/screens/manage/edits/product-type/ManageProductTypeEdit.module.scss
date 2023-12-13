@@ -1,0 +1,12 @@
+.wrapper {
+	@apply py-20;
+}
+.update {
+	@apply w-fit block mx-auto mt-10;
+}
+.subtitle {
+	@apply mb-3;
+}
+.form{
+	@apply flex flex-wrap items-start gap-8;
+}

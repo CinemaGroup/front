@@ -7,7 +7,7 @@ import { FC } from 'react'
 const ProductTypes: FC<{ className?: string }> = ({ className }) => {
 	const { types } = useProductTypes()
 
-	return <Types types={types || []} className={className} />
+	return <Types types={types || []} className={className && className} />
 }
 
 export default ProductTypes

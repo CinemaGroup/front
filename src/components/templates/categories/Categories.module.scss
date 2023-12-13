@@ -1,0 +1,39 @@
+.wrapper {
+	@apply w-full relative pr-9 flex items-start justify-between;
+	max-width: 985px;
+}
+.categories {
+	@apply w-full flex flex-wrap gap-3 h-9 overflow-hidden;
+
+	&.active {
+		@apply h-auto overflow-visible;
+	}
+}
+.button {
+	@apply relative flex items-center justify-center bg-gray-700 rounded-medium px-5 transition-colors h-8;
+	min-width: 170px;
+
+	&.active,
+	&:hover {
+		@apply bg-gray-200 text-gray-800;
+	}
+}
+.icon {
+	@apply relative mr-2;
+	width: 18px;
+	height: 18px;
+}
+.name {
+	font-size: 16px;
+}
+.open {
+	> svg {
+		@apply text-8lg text-gray-600 transition-transform;
+	}
+
+	&.active {
+		> svg {
+			transform: rotate(180deg);
+		}
+	}
+}

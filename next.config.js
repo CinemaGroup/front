@@ -13,12 +13,12 @@ const nextConfig = {
 			{
 				source: '/api/:path*',
 				destination:
-					'https://outstanding-lamb-life-jacket.cyclic.app/api/:path*',
+					'https://weak-plum-basket-clam-cape.cyclic.app/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
 				destination:
-					'https://outstanding-lamb-life-jacket.cyclic.app/uploads/:path*',
+					'https://weak-plum-basket-clam-cape.cyclic.app/uploads/:path*',
 			},
 		]
 	},

@@ -1,0 +1,68 @@
+.uploadWrapper {
+	@apply flex flex-col items-start gap-3;
+}
+.uploadBtns {
+	@apply flex items-center gap-5;
+}
+.uploadFill {
+	@apply flex flex-col gap-3;
+}
+.uploadBtn {
+	@apply w-fit py-3 px-10 rounded-small outline-border-none text-sm cursor-pointer font-semibold transition-all;
+	background: linear-gradient(26.57deg, #3c1a70 0%, rgba(93, 14, 245, 0.83));
+
+	&:focus {
+		@apply outline-border-none;
+	}
+
+	&:hover {
+		box-shadow: 0 0 30px 10px rgba(93, 14, 245, 0.3),
+			0 0 50px 30px rgba(93, 14, 245, 0.2), 0 0 60px 40px rgba(60, 26, 112, 0.2);
+	}
+}
+.uploadImage {
+	@apply mt-5 relative;
+
+	> img {
+		@apply image-like-bg rounded-md;
+	}
+
+	&.active {
+		aspect-ratio: 4 / 2;
+		@apply w-full;
+	}
+}
+.poster.active {
+	aspect-ratio: 4 / 2;
+	@apply w-full;
+}
+.icon.active {
+	max-width: 100px;
+	aspect-ratio: 1 / 1;
+	@apply w-full;
+
+	> img {
+		@apply object-contain;
+	}
+}
+.thumbnail.active {
+	max-width: 300px;
+	@apply w-full aspect-square;
+}
+.remove {
+	> svg {
+		@apply text-3lg;
+	}
+}
+.modal {
+	width: 90%;
+	height: 90%;
+}
+.label {
+	@apply pointer-events-none;
+	font-size: 15px;
+}
+.error {
+	@apply text-red-300;
+	font-size: 13px;
+}

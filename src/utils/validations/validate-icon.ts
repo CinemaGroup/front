@@ -1,4 +1,4 @@
-import { IImage } from '@/shared/interfaces/globals.interface'
+import { IImage } from '@/shared/interfaces/global.interface'
 import * as CiIcons from 'react-icons/ci'
 import * as MaterialIcons from 'react-icons/md'
 import * as PiIcons from 'react-icons/pi'

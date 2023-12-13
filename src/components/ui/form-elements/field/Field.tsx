@@ -7,7 +7,6 @@ const Field = forwardRef<HTMLInputElement, IField>(
 	(
 		{
 			label,
-			errorPosition = 'bottom',
 			className,
 			placeholder,
 			error,

@@ -1,0 +1,58 @@
+.groups {
+	@apply flex flex-col gap-28;
+}
+.groupName {
+	@apply text-6lg mb-3 font-RoadRadio text-white;
+}
+.groupText {
+	@apply w-full mb-7;
+	max-width: 800px;
+}
+.products {
+	@apply flex flex-wrap items-start gap-5;
+}
+.product {
+	@apply w-full flex flex-col justify-between;
+	max-width: calc(100% / 6 - 18px);
+}
+.preview {
+	@apply relative bg-gray-700 aspect-square w-full rounded-medium;
+
+	> img {
+		@apply image-like-bg;
+	}
+}
+.favorite {
+	@apply absolute z-1 right-4 bottom-4;
+
+	> svg {
+		@apply text-red-300 text-3lg;
+	}
+}
+.link {
+	@apply inline-block w-full h-full;
+}
+.name {
+	@apply text-white text-lg font-RoadRadio mt-4 mb-1;
+}
+.excerpt {
+	@apply mb-5;
+}
+.priceBox {
+	@apply uppercase font-RoadRadio mb-6 flex flex-col items-start;
+}
+.retail {
+	@apply w-full flex items-center gap-2 justify-between mb-1;
+}
+.oldPrice {
+	@apply text-2lg text-gray-500 line-through;
+}
+.sale {
+	@apply flex items-center justify-center bg-red-300 rounded-medium text-white py-0.5 px-4;
+}
+.price {
+	@apply text-white text-11lg;
+}
+.buy {
+	padding: 15px 34px;
+}

@@ -1,0 +1,35 @@
+.wrapper {
+	@apply py-20;
+}
+.breadcrumb {
+	@apply bg-gray-700 py-2 px-5 rounded-small inline-flex items-center gap-2 mb-5;
+
+	> svg {
+		@apply text-2lg;
+	}
+}
+.tab {
+	&.hidden {
+		@apply animate-hide;
+		display: none;
+	}
+	&.visible {
+		@apply animate-fade;
+		display: block;
+	}
+}
+.actions {
+	@apply mt-14 flex items-center justify-between;
+}
+.update {
+	@apply w-fit block mx-auto mt-10;
+}
+.prev,
+.next {
+	> svg {
+		@apply text-2lg;
+	}
+}
+.next{
+	@apply ml-auto;
+}

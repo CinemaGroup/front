@@ -6,7 +6,6 @@ export interface IFieldProps {
 	placeholder?: string
 	error?: FieldError | undefined
 	className?: string
-	errorPosition?: 'top' | 'bottom'
 }
 
 type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps

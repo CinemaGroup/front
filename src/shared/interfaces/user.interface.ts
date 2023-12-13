@@ -1,3 +1,5 @@
+import { IProduct } from './product.interface'
+
 export interface IUser {
 	id: number
 	firstName?: string
@@ -14,5 +16,5 @@ export interface IUser {
 }
 
 export interface IFullUser extends IUser {
-	favorites: string[]
+	favorites: IProduct[]
 }

@@ -1,0 +1,12 @@
+.selectContainer {
+	@apply flex flex-col gap-3 w-full relative animate-fade;
+}
+.error {
+	@apply text-red-300;
+	font-size: 13px;
+}
+.label {
+	@apply pointer-events-none;
+	font-size: 15px;
+}
+
