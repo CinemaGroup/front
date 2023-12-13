@@ -12,12 +12,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://weak-plum-basket-clam-cape.cyclic.app/api/:path*',
+				destination: 'https://gorgeous-kerchief-moth.cyclic.app/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
-				destination:
-					'https://weak-plum-basket-clam-cape.cyclic.app/uploads/:path*',
+				destination: 'https://gorgeous-kerchief-moth.cyclic.app/uploads/:path*',
 			},
 		]
 	},
