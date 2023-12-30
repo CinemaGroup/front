@@ -27,10 +27,10 @@ export const accountMenu: IAccountMenu = {
 			title: 'Партнёрам',
 			link: '/',
 		},
-		{
-			icon: 'LogOut',
-			title: 'Выйти',
-			link: '/',
-		},
+		// {
+		// 	icon: 'LogOut',
+		// 	title: 'Выйти',
+		// 	link: '/',
+		// },
 	],
 }

@@ -1,6 +1,10 @@
 .favorites {
-	@apply relative text-6lg 600:hidden;
+	@apply relative 600:hidden;
 	margin-left: 38px;
+
+	> svg {
+		@apply w-7 h-7;
+	}
 }
 .count {
 	@apply absolute bg-yellow-500 flex items-center justify-center rounded-full text-gray-800 leading-none;

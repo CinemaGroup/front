@@ -2,7 +2,6 @@
 
 import AccountTab from '@/components/ui/account-tab/AccountTab'
 import { useOutside } from '@/hooks/custom-hooks/events/useOutside'
-import { useActions } from '@/hooks/queries/user/useActions'
 import { useProfile } from '@/hooks/queries/user/useProfile'
 import cn from 'classnames'
 import Image from 'next/image'
@@ -12,15 +11,11 @@ import styles from './HeaderAccount.module.scss'
 const HeaderAccount: FC = () => {
 	const { profile } = useProfile()
 	const { ref, buttonRef, isShow, setIsShow } = useOutside(false)
-	const { logout } = useActions()
 
 	if (!profile) return null
 
 	return (
 		<div className={styles.wrapper}>
-			<button onClick={() => logout()}>
-				LOGOUT
-			</button>
 			<button
 				className={styles.button}
 				ref={buttonRef}
