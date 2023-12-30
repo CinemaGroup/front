@@ -1,19 +1,31 @@
+import telegramIcon from '@/assets/images/icons/telegram.svg'
+import whatsappIcon from '@/assets/images/icons/whatsapp.svg'
 import { ISocialFooterMenu } from '../../interface/social-footer.interface'
 
 export const SOCIAL_FOOTER: ISocialFooterMenu = {
 	items: [
 		{
-			icon: 'PiTelegramLogoLight',
+			icon: {
+				link: telegramIcon,
+				width: 24,
+				height: 24,
+				alt: 'Telegram',
+			},
 			label: '',
 			link: '/',
 		},
 		{
-			icon: 'CiMail',
+			icon: 'Mail',
 			label: '',
 			link: '/',
 		},
 		{
-			icon: 'PiWhatsappLogoLight',
+			icon: {
+				link: whatsappIcon,
+				width: 24,
+				height: 24,
+				alt: 'Whatsapp',
+			},
 			label: '',
 			link: '/',
 		},

@@ -1,6 +1,6 @@
+import { renderIcon } from '@/components/ui/icon/render-icon'
 import { useToggleFavorite } from '@/hooks/mutations/products/useToggleFavorite'
 import { useProfile } from '@/hooks/queries/user/useProfile'
-import { renderIcon } from '@/utils/custom-utils/render-icon'
 import { FC } from 'react'
 import { IFavoriteBtn } from './interface/favorite-btn.interface'
 

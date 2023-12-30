@@ -57,6 +57,9 @@ const config: Config = {
 			red: {
 				300: '#FF1616',
 			},
+			blue: {
+				300: 'rgba(60, 193, 212, 1)'
+			}
 		},
 		extend: {
 			fontSize: {

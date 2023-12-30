@@ -1,6 +1,11 @@
 import { API_URL } from '@/config/api.config'
-import { getAccessToken, removeFromStorage } from '@/services/auth/auth.helper'
-import { AuthService } from '@/services/auth/auth.service'
+import {
+	getAccessToken,
+	getAuthProvider,
+	removeFromStorage,
+} from '@/services/auth/auth.helper'
+import { GoogleAuthService } from '@/services/auth/google/google-auth.service'
+import { AuthService } from '@/services/auth/jwt/auth.service'
 import axios from 'axios'
 import { errorCatch, getContentType } from './api.helpers'
 
@@ -36,7 +41,12 @@ instance.interceptors.response.use(
 		) {
 			originalRequest._isRetry = true
 			try {
-				await AuthService.getNewTokens()
+				const provider = getAuthProvider()
+				if (provider === 'media-building') {
+					await AuthService.getNewTokens()
+				} else {
+					await GoogleAuthService.getNewTokens()
+				}
 				return instance.request(originalRequest)
 			} catch (error) {
 				if (errorCatch(error) === 'jwt expired') removeFromStorage()

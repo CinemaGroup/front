@@ -1,4 +1,4 @@
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import { IType } from '@/shared/interfaces/type.interface'
 import cn from 'classnames'
 import Link from 'next/link'
@@ -23,7 +23,7 @@ const TypesItem: FC<{ type: IType }> = ({ type }) => {
 				</h2>
 				<p className={styles.description}>{type.description}</p>
 			</div>
-			<MaterialIcon name="MdKeyboardBackspace" style={{ color: type.color }} />
+			<Icon name="ArrowLeft" />
 		</Link>
 	)
 }

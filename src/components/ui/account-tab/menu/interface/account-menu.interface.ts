@@ -1,11 +1,7 @@
-import {
-	TypeCiIconName,
-	TypeMaterialIconName,
-	TypePiIconName,
-} from '@/shared/types/icon.type'
+import { TypeLucideIcon } from '@/shared/types/icon.type'
 
 export interface IAccountMenuItem {
-	icon: TypeMaterialIconName | TypeCiIconName | TypePiIconName
+	icon: TypeLucideIcon
 	title: string
 	link: string
 }

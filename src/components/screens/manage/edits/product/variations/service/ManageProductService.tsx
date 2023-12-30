@@ -1,6 +1,6 @@
 import Button from '@/components/ui/form-elements/button/Button'
 import Field from '@/components/ui/form-elements/field/Field'
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import SubHeading from '@/components/ui/sub-heading/SubHeading'
 import cn from 'classnames'
 import { FC, useEffect, useState } from 'react'
@@ -42,7 +42,7 @@ const ManageProductService: FC<IManageProductServices> = ({
 						})
 					}}
 				>
-					<MaterialIcon name="MdAddCircleOutline" />
+					<Icon name="XCircle" />
 					Добавить услугу
 				</Button>
 			) : (
@@ -127,7 +127,7 @@ const ManageProductService: FC<IManageProductServices> = ({
 											fields.length === 1 && setService(false)
 										}}
 									>
-										<MaterialIcon name="MdDeleteOutline" />
+										<Icon name="XCircle" />
 										Удалить опцию
 									</Button>
 								</div>
@@ -145,7 +145,7 @@ const ManageProductService: FC<IManageProductServices> = ({
 							})
 						}
 					>
-						<MaterialIcon name="MdAddCircleOutline" />
+						<Icon name="PlusCircle" />
 						Добавить опцию
 					</Button>
 				</>

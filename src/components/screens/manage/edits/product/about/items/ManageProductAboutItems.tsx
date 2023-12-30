@@ -1,7 +1,7 @@
 import Button from '@/components/ui/form-elements/button/Button'
 import Field from '@/components/ui/form-elements/field/Field'
 import TextEditor from '@/components/ui/form-elements/text-editor/TextEditor'
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import cn from 'classnames'
 import { FC } from 'react'
 import { Controller, useFieldArray } from 'react-hook-form'
@@ -78,7 +78,7 @@ const ManageProductAboutItems: FC<IManageProductAboutItems> = ({
 							type="button"
 							onClick={() => remove(index)}
 						>
-							<MaterialIcon name="MdDeleteOutline" />
+							<Icon name="XCircle" />
 							Удалить Блок
 						</Button>
 					)}
@@ -95,7 +95,7 @@ const ManageProductAboutItems: FC<IManageProductAboutItems> = ({
 					})
 				}
 			>
-				<MaterialIcon name="MdAddCircleOutline" />
+				<Icon name="PlusCircle" />
 				Добавить Блок
 			</Button>
 		</>

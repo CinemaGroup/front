@@ -1,4 +1,4 @@
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import cn from 'classnames'
 import { FC, useState } from 'react'
 import styles from './Categories.module.scss'
@@ -25,7 +25,7 @@ const Categories: FC<ICategories> = ({ categories, className }) => {
 				})}
 				onClick={() => setIsOpen(!isOpen)}
 			>
-				<MaterialIcon name="MdKeyboardArrowDown" />
+				<Icon name="ChevronDown" />
 			</button>
 		</div>
 	)

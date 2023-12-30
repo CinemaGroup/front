@@ -3,7 +3,7 @@ import { useDeleteFile } from '@/hooks/mutations/file/useDeleteFile'
 import { useFiles } from '@/hooks/queries/files/useFiles'
 import Image from 'next/image'
 import { FC, useEffect, useState } from 'react'
-import PiIcon from '../../icon/PiIcon'
+import Icon from '../../icon/Icon'
 import styles from '../Storage.module.scss'
 import { IStorageFiles } from '../interface/storage.interface'
 import StorageSelectFolder from '../select-folder/StorageSelectFolder'
@@ -67,7 +67,7 @@ const StorageFiles: FC<IStorageFiles> = ({
 							className={styles.remove}
 							onClick={() => deleteFile(file.url)}
 						>
-							<PiIcon name="PiTrash" />
+							<Icon name="Trash2" />
 						</button>
 					</li>
 				))}

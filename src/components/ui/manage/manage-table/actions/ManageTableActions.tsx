@@ -1,11 +1,10 @@
 'use client'
 
-import CiIcon from '@/components/ui/icon/CiIcon'
+import Icon from '@/components/ui/icon/Icon'
 import { useRouter } from 'next/navigation'
 import { FC } from 'react'
 import styles from './ManageTableActions.module.scss'
 import { IManageActions } from './interface/manage-actions.interface'
-import PiIcon from '@/components/ui/icon/PiIcon'
 
 const ManageTableActions: FC<IManageActions> = ({ editUrl, removeHandler }) => {
 	const { push } = useRouter()
@@ -13,10 +12,10 @@ const ManageTableActions: FC<IManageActions> = ({ editUrl, removeHandler }) => {
 	return (
 		<div className={styles.actions}>
 			<button className={styles.button} onClick={() => push(editUrl)}>
-				<CiIcon name="CiEdit" />
+				<Icon name="Pencil" />
 			</button>
 			<button className={styles.button} onClick={removeHandler}>
-				<PiIcon name="PiTrash" />
+				<Icon name="Trash2" />
 			</button>
 		</div>
 	)

@@ -2,7 +2,7 @@ import Button from '@/components/ui/form-elements/button/Button'
 import Field from '@/components/ui/form-elements/field/Field'
 import TextEditor from '@/components/ui/form-elements/text-editor/TextEditor'
 import UploadField from '@/components/ui/form-elements/upload-field/UploadField'
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import SubHeading from '@/components/ui/sub-heading/SubHeading'
 import cn from 'classnames'
 import { FC } from 'react'
@@ -100,7 +100,7 @@ const ManageProductPrinciples: FC<IManageProductControl> = ({ control }) => {
 								type="button"
 								onClick={() => remove(index)}
 							>
-								<MaterialIcon name="MdDeleteOutline" />
+								<Icon name="XCircle" />
 								Удалить Блок
 							</Button>
 						)}
@@ -119,7 +119,7 @@ const ManageProductPrinciples: FC<IManageProductControl> = ({ control }) => {
 					})
 				}
 			>
-				<MaterialIcon name="MdAddCircleOutline" />
+				<Icon name="PlusCircle" />
 				Добавить Блок
 			</Button>
 		</div>

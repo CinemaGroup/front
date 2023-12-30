@@ -2,7 +2,7 @@ import Button from '@/components/ui/form-elements/button/Button'
 import Field from '@/components/ui/form-elements/field/Field'
 import TextEditor from '@/components/ui/form-elements/text-editor/TextEditor'
 import UploadField from '@/components/ui/form-elements/upload-field/UploadField'
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import SubHeading from '@/components/ui/sub-heading/SubHeading'
 import { generateRandomNumber } from '@/utils/custom-utils/random-number'
 import cn from 'classnames'
@@ -256,7 +256,7 @@ const ManageProductVariations: FC<IManageProductVariations> = ({
 										type="button"
 										onClick={() => remove(index)}
 									>
-										<MaterialIcon name="MdDeleteOutline" />
+										<Icon name="XCircle" />
 										Удалить вариацию
 									</Button>
 								)}
@@ -282,7 +282,7 @@ const ManageProductVariations: FC<IManageProductVariations> = ({
 						})
 					}
 				>
-					<MaterialIcon name="MdAddCircleOutline" />
+					<Icon name="PlusCircle" />
 					Добавить вариацию
 				</Button>
 			</div>

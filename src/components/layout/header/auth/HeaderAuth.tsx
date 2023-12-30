@@ -12,10 +12,10 @@ const HeaderAuth: FC = () => {
 
 	return (
 		<div className={styles.auth}>
-			<Link className={styles.login} href="/login">
+			<Link className={styles.login} href="/auth">
 				Войти
 			</Link>
-			<Link className={styles.register} href="/register">
+			<Link className={styles.register} href="/auth">
 				Зарегистрироваться
 			</Link>
 		</div>

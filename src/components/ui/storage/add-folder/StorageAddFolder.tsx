@@ -6,7 +6,7 @@ import { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Button from '../../form-elements/button/Button'
 import Field from '../../form-elements/field/Field'
-import MaterialIcon from '../../icon/MaterialIcon'
+import Icon from '../../icon/Icon'
 import styles from '../Storage.module.scss'
 import { IStorageAddFolder } from '../interface/storage.interface'
 import { TypeAddDirectory } from './type/add-folder.type'
@@ -42,7 +42,7 @@ const StorageAddFolder: FC<IStorageAddFolder> = ({ isShow, setIsShow }) => {
 					onClick={() => setIsShow(false)}
 					className={styles.close}
 				>
-					<MaterialIcon name="MdClose" />
+					<Icon name="X" />
 				</button>
 				<div className={styles.directoryFill}>
 					<h2 className={styles.heading}>Добавить папку</h2>

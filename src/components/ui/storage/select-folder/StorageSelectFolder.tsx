@@ -1,8 +1,7 @@
 import { useFileDirectories } from '@/hooks/queries/files/useFileDirectories'
 import cn from 'classnames'
 import { FC } from 'react'
-import CiIcon from '../../icon/CiIcon'
-import MaterialIcon from '../../icon/MaterialIcon'
+import Icon from '../../icon/Icon'
 import styles from '../Storage.module.scss'
 import { IStorageSelectFolder } from '../interface/storage.interface'
 
@@ -31,7 +30,7 @@ const StorageSelectFolder: FC<IStorageSelectFolder> = ({
 					}}
 					className={styles.close}
 				>
-					<MaterialIcon name="MdClose" />
+					<Icon name="X" />
 				</button>
 				<div className={styles.selectFill}>
 					<h2 className={styles.heading}>Выберите папку</h2>
@@ -50,7 +49,7 @@ const StorageSelectFolder: FC<IStorageSelectFolder> = ({
 										}
 									}}
 								>
-									<CiIcon name="CiFolderOn" />
+									<Icon name="Folder" />
 									{directory}
 								</button>
 							</li>

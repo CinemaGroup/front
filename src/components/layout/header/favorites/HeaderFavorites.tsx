@@ -1,6 +1,6 @@
 'use client'
 
-import PiIcon from '@/components/ui/icon/PiIcon'
+import Icon from '@/components/ui/icon/Icon'
 import { useAuth } from '@/hooks/queries/user/useAuth'
 import Link from 'next/link'
 import { FC } from 'react'
@@ -13,7 +13,7 @@ const HeaderFavorites: FC = () => {
 
 	return (
 		<Link href="/favorites" className={styles.favorites}>
-			<PiIcon name="PiHeartThin" />
+			<Icon name="Heart" />
 			<span className={styles.count}>0</span>
 		</Link>
 	)

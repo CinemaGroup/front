@@ -1,3 +1,3 @@
 export interface ISection {
-	classNames?: string
+	className?: string
 }

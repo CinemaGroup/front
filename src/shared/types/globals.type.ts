@@ -1,10 +1,4 @@
-import * as CiIcons from 'react-icons/ci'
-import * as MaterialIcons from 'react-icons/md'
-import * as PiIcons from 'react-icons/pi'
 import { IImage } from '../interfaces/global.interface'
+import { TypeLucideIcon } from './icon.type'
 
-export type TypeIcon =
-	| keyof typeof MaterialIcons
-	| keyof typeof CiIcons
-	| keyof typeof PiIcons
-	| IImage
+export type TypeIcon = TypeLucideIcon | IImage

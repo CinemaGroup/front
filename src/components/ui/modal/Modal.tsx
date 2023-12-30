@@ -2,7 +2,7 @@ import cn from 'classnames'
 import type { FC, PropsWithChildren } from 'react'
 import { useRef } from 'react'
 import ReactDOM from 'react-dom'
-import MaterialIcon from '../icon/MaterialIcon'
+import Icon from '../icon/Icon'
 import styles from './Modal.module.scss'
 import { IModal } from './interface/modal.interface'
 
@@ -24,7 +24,7 @@ const Modal: FC<PropsWithChildren<IModal>> = ({
 		>
 			<div className={cn(styles.window, className && className)}>
 				<button onClick={closeModal} className={styles.close}>
-					<MaterialIcon name="MdClose" />
+					<Icon name="X" />
 				</button>
 				{children}
 			</div>

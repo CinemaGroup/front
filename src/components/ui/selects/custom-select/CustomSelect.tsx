@@ -1,8 +1,8 @@
 'use client'
 
-import { renderIcon } from '@/utils/custom-utils/render-icon'
 import cn from 'classnames'
 import { FC, useState } from 'react'
+import { renderIcon } from '../../icon/render-icon'
 import styles from './CustomSelect.module.scss'
 import { ISelect } from './interface/custom-select.interface'
 
@@ -13,7 +13,7 @@ const CustomSelect: FC<ISelect<any>> = ({ data, onChange, value, title }) => {
 		<div className={styles.select}>
 			<button className={styles.open} onClick={() => setIsOpen(!isOpen)}>
 				{title && <b>{title}: </b>}
-				{renderIcon(value.icon || null)}
+				{value.icon && renderIcon(value.icon)}
 				{value.label}
 			</button>
 			{isOpen && (
@@ -33,7 +33,7 @@ const CustomSelect: FC<ISelect<any>> = ({ data, onChange, value, title }) => {
 								}}
 								disabled={item.key === value?.key}
 							>
-								{renderIcon(item.icon || null)}
+								{item.icon && renderIcon(item.icon)}
 								{item.label}
 							</button>
 						</li>

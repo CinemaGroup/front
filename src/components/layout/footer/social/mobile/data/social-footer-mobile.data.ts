@@ -3,22 +3,22 @@ import { ISocialFooterMenu } from '../../interface/social-footer.interface'
 export const SOCIAL_FOOTER_MOBILE: ISocialFooterMenu = {
 	items: [
 		{
-			icon: 'PiHeartThin',
+			icon: 'Heart',
 			label: 'Избранное',
 			link: '/',
 		},
 		{
-			icon: 'CiSearch',
+			icon: 'Search',
 			label: 'Поиск',
 			link: '/',
 		},
 		{
-			icon: 'PiHouseThin',
+			icon: 'Home',
 			label: 'Главная',
 			link: '/',
 		},
 		{
-			icon: 'CiUser',
+			icon: 'User',
 			label: 'Вход',
 			link: '/',
 		},

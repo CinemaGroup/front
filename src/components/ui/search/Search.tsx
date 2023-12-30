@@ -1,13 +1,10 @@
 import cn from 'classnames'
 import { FC } from 'react'
-import CiIcon from '../icon/CiIcon'
+import Icon from '../icon/Icon'
 import styles from './Search.module.scss'
 import { ISearch } from './interface/search.interface'
 
-const Search: FC<ISearch> = ({
-	className,
-	placeholder,
-}) => {
+const Search: FC<ISearch> = ({ className, placeholder }) => {
 	return (
 		<div className={cn(styles.search, className && className)}>
 			<input
@@ -15,7 +12,7 @@ const Search: FC<ISearch> = ({
 				placeholder={placeholder ? placeholder : 'Поиск...'}
 			/>
 			<button className={styles.button}>
-				<CiIcon name="CiSearch" />
+				<Icon name="Search" />
 			</button>
 		</div>
 	)

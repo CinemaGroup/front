@@ -8,7 +8,7 @@ export const useProfile = () => {
 	const { user } = useAuth()
 
 	const { data, isError, error } = useQuery({
-		queryKey: ['get profile'],
+		queryKey: ['get profile', user],
 		queryFn: () => UserService.getProfile(),
 		select: ({ data }) => data,
 		enabled: !!user,

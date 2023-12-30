@@ -1,6 +1,6 @@
 import cn from 'classnames'
 import { FC } from 'react'
-import CiIcon from '../../icon/CiIcon'
+import Icon from '../../icon/Icon'
 import styles from '../FormElements.module.scss'
 import { ISearchField } from './interface/search-field.interface'
 
@@ -26,7 +26,7 @@ const SearchField: FC<ISearchField> = ({
 				className={styles.field}
 			/>
 			<button className={styles.micro}>
-				<CiIcon name="CiSearch" />
+				<Icon name="Search" />
 			</button>
 		</div>
 	)

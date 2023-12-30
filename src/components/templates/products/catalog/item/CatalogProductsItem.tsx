@@ -1,4 +1,7 @@
+import filledHeart from '@/assets/images/icons/heart-fill-red.svg'
+import defaultHeart from '@/assets/images/icons/heart-red.svg'
 import Button from '@/components/ui/form-elements/button/Button'
+import { SITE_NAME } from '@/constants/seo.constants'
 import { IProduct } from '@/shared/interfaces/product.interface'
 import { descriptionToExcerpt } from '@/utils/converts/description-to-excerpt'
 import { getPercent } from '@/utils/custom-utils/get-percent'
@@ -25,8 +28,18 @@ const CatalogProductsItem: FC<{ product: IProduct }> = ({ product }) => {
 				<FavoriteBtn
 					className={styles.favorite}
 					productId={product.id}
-					defaultIcon={'PiHeart'}
-					checkedIcon={'PiHeartFill'}
+					defaultIcon={{
+						link: defaultHeart,
+						width: 19,
+						height: 17,
+						alt: `${SITE_NAME} Favorite`,
+					}}
+					checkedIcon={{
+						link: filledHeart,
+						width: 19,
+						height: 17,
+						alt: `${SITE_NAME} Favorite`,
+					}}
 				/>
 			</div>
 			<Link className={styles.link} href={`/product/${product.slug}`}>
@@ -41,7 +54,9 @@ const CatalogProductsItem: FC<{ product: IProduct }> = ({ product }) => {
 					{product.variations[0].salePrice ? (
 						<>
 							<div className={styles.retail}>
-								<p className={styles.oldPrice}>{product.variations[0].price} руб</p>
+								<p className={styles.oldPrice}>
+									{product.variations[0].price} руб
+								</p>
 								<span className={styles.sale}>
 									{100 -
 										getPercent(
@@ -51,7 +66,9 @@ const CatalogProductsItem: FC<{ product: IProduct }> = ({ product }) => {
 									% Скидка
 								</span>
 							</div>
-							<p className={styles.price}>{product.variations[0].salePrice} руб</p>
+							<p className={styles.price}>
+								{product.variations[0].salePrice} руб
+							</p>
 						</>
 					) : (
 						<p className={styles.price}>{product.variations[0].price} руб</p>

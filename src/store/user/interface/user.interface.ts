@@ -1,3 +1,4 @@
+import { AuthProvider } from '@/services/auth/types/auth.types'
 import { IUser } from '@/shared/interfaces/user.interface'
 
 export interface IUserState {
@@ -15,12 +16,22 @@ export interface IInitialState {
 	isLoading: boolean
 }
 
-export interface IAuth {
+export interface IAuthLogin {
+	emailOrLogin: string
+	password: string
+	isRemember: boolean
+}
+
+export interface IAuthRegister {
 	login: string
 	email: string
 	password: string
+	isRemember: boolean
+	isVerified: boolean
 }
 
 export interface IAuthResponse extends ITokens {
 	user: IUser
+	isRemember: boolean
+	provider: AuthProvider
 }

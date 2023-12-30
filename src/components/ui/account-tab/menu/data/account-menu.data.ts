@@ -3,32 +3,32 @@ import { IAccountMenu } from '../interface/account-menu.interface'
 export const accountMenu: IAccountMenu = {
 	items: [
 		{
-			icon: 'MdHome',
+			icon: 'CircleUser',
 			title: 'Личный кабинет',
 			link: '/',
 		},
 		{
-			icon: 'MdLocalFireDepartment',
+			icon: 'Wallet',
 			title: 'Баланс',
 			link: '/',
 		},
 		{
-			icon: 'MdExplore',
+			icon: 'History',
 			title: 'История заказов',
 			link: '/serials',
 		},
 		{
-			icon: 'MdHelp',
+			icon: 'HeartHandshake',
 			title: 'Служба поддержки',
 			link: '/faq',
 		},
 		{
-			icon: 'MdHelp',
+			icon: 'Users',
 			title: 'Партнёрам',
 			link: '/',
 		},
 		{
-			icon: 'MdHelp',
+			icon: 'LogOut',
 			title: 'Выйти',
 			link: '/',
 		},

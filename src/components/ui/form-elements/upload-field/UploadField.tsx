@@ -1,7 +1,7 @@
 import cn from 'classnames'
 import Image from 'next/image'
 import { FC, useState } from 'react'
-import PiIcon from '../../icon/PiIcon'
+import Icon from '../../icon/Icon'
 import Modal from '../../modal/Modal'
 import Storage from '../../storage/Storage'
 import styles from './UploadField.module.scss'
@@ -47,7 +47,7 @@ const UploadField: FC<IUploadField> = ({
 								className={styles.remove}
 								onClick={handleRemoveFile}
 							>
-								<PiIcon name="PiTrash" />
+								<Icon name="Trash2" />
 							</button>
 						)}
 					</div>

@@ -2,7 +2,7 @@
 
 import Container from '@/components/ui/container/Container'
 import Button from '@/components/ui/form-elements/button/Button'
-import MaterialIcon from '@/components/ui/icon/MaterialIcon'
+import Icon from '@/components/ui/icon/Icon'
 import { getAdminUrl } from '@/config/url.config'
 import { useMultiStepForm } from '@/hooks/custom-hooks/form/useMultiStepForm'
 import { useManageProductEdit } from '@/hooks/manage/products/useManageProductEdit'
@@ -39,7 +39,7 @@ const ManageProductEdit: FC<{ queryId: string }> = ({ queryId }) => {
 			<Container>
 				<div className={styles.fill}>
 					<Link href={getAdminUrl('/products')} className={styles.breadcrumb}>
-						<MaterialIcon name="MdOutlineChevronLeft" />
+						<Icon name="ChevronLeft" />
 						Назад
 					</Link>
 					<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
@@ -57,14 +57,14 @@ const ManageProductEdit: FC<{ queryId: string }> = ({ queryId }) => {
 					<div className={styles.actions}>
 						{!isFirstStep && (
 							<Button variant="light" className={styles.prev} onClick={prev}>
-								<MaterialIcon name="MdOutlineArrowCircleLeft" />
+								<Icon name="ChevronLeftCircle" />
 								Предыдущий шаг
 							</Button>
 						)}
 						{!isLastStep && (
 							<Button variant="light" className={styles.next} onClick={next}>
 								Следующий шаг
-								<MaterialIcon name="MdOutlineArrowCircleRight" />
+								<Icon name="ChevronRightCircle" />
 							</Button>
 						)}
 					</div>

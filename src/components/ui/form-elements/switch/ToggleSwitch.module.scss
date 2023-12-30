@@ -1,0 +1,51 @@
+.toggle{
+	@apply flex flex-col items-start gap-3;
+}
+.error {
+	@apply text-red-300;
+	font-size: 13px;
+}
+.button {
+	@apply inline-block relative min-w-9 min-h-5 cursor-pointer;
+}
+.switch {
+	@apply absolute rounded-full top-0 bottom-0 left-0 right-0 w-full h-full transition-colors flex-center-between p-0.5;
+	background-color: #a8b3b4;
+
+	&.active {
+		@apply bg-blue-300;
+
+		.knob {
+			@apply left-full;
+			transform: translateX(calc(-100% - 4px));
+		}
+
+		> svg {
+			&:first-child {
+				@apply animate-fade opacity-100;
+			}
+
+			&:last-child {
+				@apply animate-hide opacity-0;
+			}
+		}
+	}
+
+	> svg {
+		@apply text-white w-3.5 h-3.5;
+
+		&:first-child {
+			@apply animate-hide opacity-0;
+		}
+
+		&:last-child {
+			@apply animate-fade opacity-100;
+		}
+	}
+}
+.knob {
+	@apply absolute top-0 bottom-0 left-1 my-auto w-3.5 h-3.5 rounded-full bg-white transition-all;
+}
+.checkbox {
+	@apply hidden;
+}
