@@ -3,11 +3,11 @@ import { ProductGroupService } from '@/services/product-group/product-group.serv
 import { TypeProductGroupInput } from '@/services/product-group/types/product-group.type'
 import { getKeys } from '@/utils/custom-utils/get-keys'
 import { toastError } from '@/utils/custom-utils/toast-error'
-import { useQueryClient, useQuery, useMutation } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import { UseFormSetValue, SubmitHandler } from 'react-hook-form'
-import { toastr } from 'react-redux-toastr'
+import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 export const useManageProductGroupEdit = (
 	queryId: string,
@@ -39,10 +39,7 @@ export const useManageProductGroupEdit = (
 
 	useEffect(() => {
 		if (isError) {
-			toastError(
-				'Get product groups',
-				'An error occurred while getting product groups'
-			)
+			toastError('Ошибка при получении группы')
 		}
 	}, [isError])
 
@@ -50,11 +47,11 @@ export const useManageProductGroupEdit = (
 		mutationKey: ['update manage product groups'],
 		mutationFn: (data: TypeProductGroupInput) =>
 			ProductGroupService.update(groupId, data),
-		onError: (error) => {
-			toastError(error, 'Update product groups')
+		onError: () => {
+			toastError('Ошибка при обновлении группы')
 		},
 		onSuccess: async () => {
-			toastr.success('Update product groups', 'Update was successful')
+			toast.success('Группа успешно обновлена')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage product groups', groupId],
 			})

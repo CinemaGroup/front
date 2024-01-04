@@ -8,7 +8,7 @@ import { toastError } from '@/utils/custom-utils/toast-error'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useMemo, useState } from 'react'
-import { toastr } from 'react-redux-toastr'
+import toast from 'react-hot-toast'
 
 export const useManageProductTypes = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -48,11 +48,11 @@ export const useManageProductTypes = () => {
 	const { mutateAsync: createAsync } = useMutation({
 		mutationKey: ['create manage product type'],
 		mutationFn: () => ProductTypeService.create(),
-		onError: (error) => {
-			toastError(error, 'Create product type')
+		onError: () => {
+			toastError('Ошибка при создании типа')
 		},
 		onSuccess: ({ data: id }) => {
-			toastr.success('Create product type', 'Create was successful')
+			toast.success('Тип успешно создан')
 			push(getAdminUrl(`/product-type/edit/${id}`))
 		},
 	})
@@ -60,11 +60,11 @@ export const useManageProductTypes = () => {
 	const { mutateAsync: deleteAsync } = useMutation({
 		mutationKey: ['delete manage product type'],
 		mutationFn: (typeId: string) => ProductTypeService.delete(typeId),
-		onError: (error) => {
-			toastError(error, 'Delete product type')
+		onError: () => {
+			toastError('Ошибка при удалении типа')
 		},
 		onSuccess: async () => {
-			toastr.success('Delete product type', 'Delete was successful')
+			toast.success('Тип успешно удален')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage product types list'],
 			})

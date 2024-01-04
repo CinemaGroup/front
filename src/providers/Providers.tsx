@@ -7,7 +7,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { PropsWithChildren } from 'react'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
-import ReduxToast from './redux/ReduxToast'
+import CustomToaster from './toast/Toast'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -23,7 +23,7 @@ export default function Providers({ children }: PropsWithChildren<unknown>) {
 			<Provider store={store}>
 				<PersistGate loading={null} persistor={persistor}>
 					<AuthProvider>
-						<ReduxToast />
+						<CustomToaster />
 						{children}
 					</AuthProvider>
 				</PersistGate>

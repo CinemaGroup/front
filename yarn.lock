@@ -92,7 +92,7 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.23.6.tgz#ba1c9e512bda72a47e285ae42aff9d2a635a9e3b"
   integrity sha512-Z2uID7YJ7oNvAI20O9X0bblw7Qqs8Q2hFy0R9tAfnfLkp5MW0UH9eUvnDSnFwKZ0AvgS1ucqR4KzvVHgnke1VQ==
 
-"@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.18.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.8.7":
   version "7.23.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.6.tgz#c05e610dc228855dc92ef1b53d07389ed8ab521d"
   integrity sha512-zHd0eUrf5GZoOWVCXp6koAKQTfZV07eit6bGPmJgnZdnSAvvZee6zniW2XMF7Cmc4ISOOnPy3QaSiIJGJkVEDQ==
@@ -601,14 +601,6 @@
     "@types/draft-js" "*"
     "@types/react" "*"
 
-"@types/react-redux-toastr@^7.6.5":
-  version "7.6.6"
-  resolved "https://registry.yarnpkg.com/@types/react-redux-toastr/-/react-redux-toastr-7.6.6.tgz#80fdee531537a8ae6a13260f6d1b8fb2326b12fb"
-  integrity sha512-NZR51Mpw2IcDsyh9NijqfYFDb3CycxlpuvdQX2OD00An4Z0oOovZYqmYhsIcnLEsPpY+q7vhcX/DsGiRdfYqTw==
-  dependencies:
-    "@types/react" "*"
-    redux "^3.6.0 || ^4.0.0"
-
 "@types/react-select@^5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@types/react-select/-/react-select-5.0.1.tgz#04fc85edd34a72675a0ab56ad4c30428aab0e444"
@@ -641,6 +633,11 @@
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
   integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
+
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha512-j5QzrmsokwWWp6kUcJQySpbG+xfOBqqKnup3OIk1pz+kB/80SLorZ9V8zHFLO92Lcd+hbvq8bT+zOGoPkmBV0Q==
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -809,7 +806,7 @@ chalk@^2.4.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-classnames@^2.2.6, classnames@^2.3.2:
+classnames@^2.2.6:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.5.0.tgz#9304d63d8d7135989e33e1ffb0bcc65178f92c2a"
   integrity sha512-FQuRlyKinxrb5gwJlfVASbSrDlikDJ07426TrfPsdGLvtochowmkbnSFdQGJ2aoXrSetq5KqGV9emvWpy+91xA==
@@ -1021,11 +1018,6 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eventemitter3@^3.1.2:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.2.tgz#2d3d48f9c346698fce83a85d7d664e98535df6e7"
-  integrity sha512-tvtQIeLVHjDkJYnzf2dgVMxfuSGJeM/7UCG17TT4EumTfNtF+0nebF/4zWOIkCreAbtNqhGEboB6BWrwqNaw4Q==
-
 fast-glob@^3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.3.2.tgz#a904501e57cfdd2ffcded45e99a54fef55e46129"
@@ -1146,6 +1138,11 @@ globals@^11.1.0:
   version "11.12.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
+
+goober@^2.1.10:
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/goober/-/goober-2.1.13.tgz#e3c06d5578486212a76c9eba860cbc3232ff6d7c"
+  integrity sha512-jFj3BQeleOoy7t93E9rZ2de+ScC4lQICLwiAQmKMg9F6roKGaLSHoCDYKkWlSafg138jejvq/mTdvmnwDQgqoQ==
 
 graceful-fs@^4.1.2, graceful-fs@^4.2.11:
   version "4.2.11"
@@ -1675,18 +1672,17 @@ react-hook-form@^7.48.2:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.49.2.tgz#6fb2742e1308020f26cb1915c7012b6c07b11ade"
   integrity sha512-TZcnSc17+LPPVpMRIDNVITY6w20deMdNi6iehTFLV1x8SqThXGwu93HjlUVU09pzFgZH7qZOvLMM7UYf2ShAHA==
 
+react-hot-toast@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.4.1.tgz#df04295eda8a7b12c4f968e54a61c8d36f4c0994"
+  integrity sha512-j8z+cQbWIM5LY37pR6uZR6D4LfseplqnuAO4co4u8917hBUvXlEqyP1ZzqVLcqoyUesZZv/ImreoCeHVDpE5pQ==
+  dependencies:
+    goober "^2.1.10"
+
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-redux-toastr@^7.6.13:
-  version "7.6.13"
-  resolved "https://registry.yarnpkg.com/react-redux-toastr/-/react-redux-toastr-7.6.13.tgz#9d1df102d6d9565f1fbce98a45c14166239b7669"
-  integrity sha512-dK0Qh5+xkvIYuh8EME8mFQVZMzeRc+DxV3U4SMWjEVpYt2D19+bH/u2hobmQclsebRVszNi0X/vlPIBihsy/GA==
-  dependencies:
-    classnames "^2.3.2"
-    eventemitter3 "^3.1.2"
 
 react-redux@^9.0.4:
   version "9.0.4"
@@ -1751,13 +1747,6 @@ redux-thunk@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-3.1.0.tgz#94aa6e04977c30e14e892eae84978c1af6058ff3"
   integrity sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==
-
-"redux@^3.6.0 || ^4.0.0":
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/redux/-/redux-4.2.1.tgz#c08f4306826c49b5e9dc901dee0452ea8fce6197"
-  integrity sha512-LAUYz4lc+Do8/g7aeRa8JkyDErK6ekstQaqWQrNRW//MY1TvCEpMtpTWvlQ+FPbWCx+Xixu/6SHt5N0HR+SB4w==
-  dependencies:
-    "@babel/runtime" "^7.9.2"
 
 redux@^5.0.0:
   version "5.0.1"
@@ -2180,3 +2169,8 @@ yaml@^2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-2.3.4.tgz#53fc1d514be80aabf386dc6001eb29bf3b7523b2"
   integrity sha512-8aAvwVUSHpfEqTQ4w/KMlf3HcRdt50E5ODIQJBw1fQ5RL34xabzxtUlzTXVqc4rkZsPbvrXKWnABCD7kWSmocA==
+
+yarn@^1.22.21:
+  version "1.22.21"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.21.tgz#1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
+  integrity sha512-ynXaJsADJ9JiZ84zU25XkPGOvVMmZ5b7tmTSpKURYwgELdjucAOydqIOrOfTxVYcNXe91xvLZwcRh68SR3liCg==

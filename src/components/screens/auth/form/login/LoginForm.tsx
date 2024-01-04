@@ -8,7 +8,7 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import styles from '../../Auth.module.scss'
 import { ILoginForm } from './interface/login-form.interface'
 
-const LoginForm: FC<ILoginForm> = ({ next }) => {
+const LoginForm: FC<ILoginForm> = ({ next, goTo }) => {
 	const { login } = useActions()
 
 	const {
@@ -47,6 +47,8 @@ const LoginForm: FC<ILoginForm> = ({ next }) => {
 								'Минимальная длина пароля должна быть не менее 6 символов',
 						},
 					})}
+					variant="auth"
+					onForgotClick={goTo}
 					type="password"
 					error={errors.password}
 					placeholder="Пароль"

@@ -3,11 +3,11 @@ import { ProductCategoryService } from '@/services/product-category/product-cate
 import { TypeProductCategoryInput } from '@/services/product-category/types/product-category.type'
 import { getKeys } from '@/utils/custom-utils/get-keys'
 import { toastError } from '@/utils/custom-utils/toast-error'
-import { useQueryClient, useQuery, useMutation } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
-import { UseFormSetValue, SubmitHandler } from 'react-hook-form'
-import { toastr } from 'react-redux-toastr'
+import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
+import toast from 'react-hot-toast'
 
 export const useManageProductCategoryEdit = (
 	queryId: string,
@@ -39,10 +39,7 @@ export const useManageProductCategoryEdit = (
 
 	useEffect(() => {
 		if (isError) {
-			toastError(
-				'Get product category',
-				'An error occurred while getting product category'
-			)
+			toastError('Ошибка при получении категории')
 		}
 	}, [isError])
 
@@ -51,10 +48,10 @@ export const useManageProductCategoryEdit = (
 		mutationFn: (data: TypeProductCategoryInput) =>
 			ProductCategoryService.update(categoryId, data),
 		onError: (error) => {
-			toastError(error, 'Update product category')
+			toastError('Ошибка при обновлении категории')
 		},
 		onSuccess: async () => {
-			toastr.success('Update product category', 'Update was successful')
+			toast.success('Категория успешно обновлена')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage product category', categoryId],
 			})

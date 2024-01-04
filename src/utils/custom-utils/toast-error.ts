@@ -1,8 +1,8 @@
 import { errorCatch } from 'api/api.helpers'
-import { toastr } from 'react-redux-toastr'
+import toast from 'react-hot-toast'
 
-export const toastError = (error: any, title?: string) => {
+export const toastError = (error: any) => {
 	const message = errorCatch(error)
-	toastr.error(title || 'Error request', message)
+	toast.error(message)
 	throw message
 }

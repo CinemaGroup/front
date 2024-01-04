@@ -7,7 +7,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 import { SubmitHandler, UseFormSetValue } from 'react-hook-form'
-import { toastr } from 'react-redux-toastr'
+import toast from 'react-hot-toast'
 
 export const useManageProductEdit = (
 	queryId: string,
@@ -39,7 +39,7 @@ export const useManageProductEdit = (
 
 	useEffect(() => {
 		if (isError) {
-			toastError('Get product', 'An error occurred while getting product')
+			toastError('Ошибка при получении продукта')
 		}
 	}, [isError])
 
@@ -47,11 +47,11 @@ export const useManageProductEdit = (
 		mutationKey: ['update manage product'],
 		mutationFn: (data: TypeProductInput) =>
 			ProductService.update(productId, data),
-		onError: (error) => {
-			toastError(error, 'Update product')
+		onError: () => {
+			toastError('Ошибка при обновлении продукта')
 		},
 		onSuccess: async () => {
-			toastr.success('Update product', 'Update was successful')
+			toast.success('Продукт успешно обновлен')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage product', productId],
 			})

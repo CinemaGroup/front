@@ -6,6 +6,8 @@ export interface IFieldProps {
 	placeholder?: string
 	error?: FieldError | undefined
 	className?: string
+	variant?: 'auth' | 'default',
+	onForgotClick?: () => void
 }
 
 type TypeInputPropsField = InputHTMLAttributes<HTMLInputElement> & IFieldProps

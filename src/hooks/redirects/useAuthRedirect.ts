@@ -4,6 +4,7 @@ import { useAuth } from '../queries/user/useAuth'
 
 export const useAuthRedirect = () => {
 	const { user } = useAuth()
+	console.log(user)
 
 	const { replace } = useRouter()
 

@@ -30,6 +30,16 @@ export interface IAuthRegister {
 	isVerified: boolean
 }
 
+export interface IAuthForgot {
+	email: string
+}
+
+export interface IAuthReset {
+	token: string
+	email: string
+	password: string
+}
+
 export interface IAuthResponse extends ITokens {
 	user: IUser
 	isRemember: boolean

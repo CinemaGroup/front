@@ -1,0 +1,45 @@
+.overlay {
+	@apply fixed z-10 top-0 bottom-0 left-0 right-0 w-screen h-screen flex items-center justify-center bg-black/70 animate-fade;
+}
+.box {
+	@apply w-full relative;
+	height: 60px;
+	max-width: 150px;
+}
+.circle {
+	@apply absolute w-5 h-5 rounded-full bg-white;
+	animation: circleAnimation 0.5s alternate infinite ease;
+
+	&:first-child {
+		@apply left-0;
+	}
+
+	&:nth-child(2) {
+		@apply left-0 right-0 mx-auto;
+		animation-delay: 0.2s;
+	}
+
+	&:nth-child(3) {
+		@apply right-0;
+		animation-delay: 0.3s;
+	}
+}
+
+@keyframes circleAnimation {
+	0% {
+		top: 60px;
+		height: 5px;
+		border-radius: 50px 50px 25px 25px;
+		transform: scaleX(1.7);
+	}
+
+	40% {
+		height: 20px;
+		border-radius: 50%;
+		transform: scaleX(1);
+	}
+
+	100% {
+		top: 0%;
+	}
+}

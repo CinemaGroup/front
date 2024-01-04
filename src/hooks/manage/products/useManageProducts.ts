@@ -8,7 +8,7 @@ import { toastError } from '@/utils/custom-utils/toast-error'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useMemo, useState } from 'react'
-import { toastr } from 'react-redux-toastr'
+import toast from 'react-hot-toast'
 
 export const useManageProducts = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -48,10 +48,10 @@ export const useManageProducts = () => {
 		mutationKey: ['create manage product'],
 		mutationFn: () => ProductService.create(),
 		onError: (error) => {
-			toastError(error, 'Create product')
+			toastError('Ошибка при создании продукта')
 		},
 		onSuccess: ({ data: id }) => {
-			toastr.success('Create product', 'Create was successful')
+			toast.success('Продукт успешно создан')
 			push(getAdminUrl(`/product/edit/${id}`))
 		},
 	})
@@ -60,10 +60,10 @@ export const useManageProducts = () => {
 		mutationKey: ['delete manage product'],
 		mutationFn: (productId: string) => ProductService.delete(productId),
 		onError: (error) => {
-			toastError(error, 'Delete product')
+			toastError('Ошибка при удалении продукта')
 		},
 		onSuccess: async () => {
-			toastr.success('Delete product', 'Delete was successful')
+			toast.success('Продукт успешно удален')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage products list'],
 			})

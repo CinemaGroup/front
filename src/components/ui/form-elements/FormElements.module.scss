@@ -26,3 +26,16 @@
 		@apply text-white bg-gray-700;
 	}
 }
+.authField{
+	@apply relative;
+
+	> input {
+		padding-right: 120px;
+	}
+
+	> button {
+		@apply absolute z-1 right-3 top-0 bottom-0 my-auto;
+		color: rgba(201, 201, 201, 0.5);
+		font-size: 12px;
+	}
+}

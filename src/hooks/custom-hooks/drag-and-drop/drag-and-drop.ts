@@ -24,7 +24,7 @@ export const useDragAndDrop = (
 			setSelectedFolder('images')
 		},
 		onError: (error) => {
-			toastError(error, 'Upload file')
+			toastError('Ошибка при загрузке файла')
 		},
 	})
 

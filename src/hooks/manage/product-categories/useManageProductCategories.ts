@@ -7,7 +7,7 @@ import { toastError } from '@/utils/custom-utils/toast-error'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useRouter } from 'next/navigation'
 import { ChangeEvent, useMemo, useState } from 'react'
-import { toastr } from 'react-redux-toastr'
+import toast from 'react-hot-toast'
 
 export const useManageProductCategories = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -46,23 +46,24 @@ export const useManageProductCategories = () => {
 	const { mutateAsync: createAsync } = useMutation({
 		mutationKey: ['create manage product category'],
 		mutationFn: () => ProductCategoryService.create(),
-		onError: (error) => {
-			toastError(error, 'Create product category')
+		onError: () => {
+			toastError('Ошибка при создании категории')
 		},
 		onSuccess: ({ data: id }) => {
-			toastr.success('Create product category', 'Create was successful')
+			toast.success('Категория успешно создана')
 			push(getAdminUrl(`/product-category/edit/${id}`))
 		},
 	})
 
 	const { mutateAsync: deleteAsync } = useMutation({
 		mutationKey: ['delete manage product category'],
-		mutationFn: (categoryId: string) => ProductCategoryService.delete(categoryId),
-		onError: (error) => {
-			toastError(error, 'Delete product category')
+		mutationFn: (categoryId: string) =>
+			ProductCategoryService.delete(categoryId),
+		onError: () => {
+			toastError('Ошибка при удалении категории')
 		},
 		onSuccess: async () => {
-			toastr.success('Delete product category', 'Delete was successful')
+			toast.success('Категория успешно удалена')
 			await queryClient.invalidateQueries({
 				queryKey: ['get manage product categories list'],
 			})

@@ -1,5 +1,4 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { reducer as toastrReducer } from 'react-redux-toastr'
 import {
 	FLUSH,
 	PAUSE,
@@ -19,7 +18,6 @@ const combinedReducers = combineReducers({
 	user: userSlice.reducer,
 	filesFilters: filesFiltersSlice.reducer,
 	productsFilters: productsFiltersSlice.reducer,
-	toastr: toastrReducer,
 })
 
 let mainReducer = combinedReducers
