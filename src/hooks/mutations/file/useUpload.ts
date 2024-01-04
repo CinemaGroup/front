@@ -27,7 +27,7 @@ export const useUpload: TypeUpload = (folder, onFileSelect) => {
 			}
 		},
 		onError: (error) => {
-			toastError(error, 'Create Order')
+			toastError('Ошибка при загрузке файла')
 		},
 	})
 
