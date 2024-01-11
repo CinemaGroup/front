@@ -76,11 +76,7 @@ const UploadField: FC<IUploadField> = ({
 				)}
 			</div>
 			{isOpen && (
-				<Modal
-					isOpen={isOpen}
-					closeModal={() => setIsOpen(false)}
-					className={styles.modal}
-				>
+				<Modal closeModal={() => setIsOpen(false)} className={styles.modal}>
 					<Storage onFileSelect={handleFileSelect} />
 				</Modal>
 			)}
