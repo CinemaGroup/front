@@ -11,4 +11,11 @@ export interface ISelect<K = string> {
 	onChange: (item: ISelectItem<K>) => void
 	value: ISelectItem<K>
 	title?: string
+	wrapperClassName?: string
+	listClassName?: string
+	buttonClassName?: string
+	toggleIcon?: TypeIcon
+	toggleIconClassName?: string
+	itemClassName?: string
+	itemActiveClassName?: string
 }

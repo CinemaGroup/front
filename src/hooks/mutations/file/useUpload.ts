@@ -9,21 +9,29 @@ type TypeUpload = (
 ) => {
 	uploadFile: (e: ChangeEvent<HTMLInputElement>) => Promise<void>
 	removeFile: () => void
-	uploadedFile: string | null
+	uploadedFiles: string[] | null
 }
 
 export const useUpload: TypeUpload = (folder, onFileSelect) => {
-	const [uploadedFile, setUploadedFile] = useState<string | null>(null)
+	const [uploadedFiles, setUploadedFiles] = useState<string[] | null>([])
 
 	const { mutateAsync } = useMutation({
 		mutationKey: ['upload file'],
-		mutationFn: (data: FormData) => FileService.upload(data, folder),
+		mutationFn: (formData: FormData) => FileService.upload(formData, folder),
 		onSuccess: ({ data }) => {
-			const fileUrl = data[0].url
-			setUploadedFile(fileUrl)
+			const allUploadedFiles = data.map((file) => file.url)
+
+			setUploadedFiles((prevUploadedFiles) => {
+				if (prevUploadedFiles) {
+					return [...prevUploadedFiles, ...allUploadedFiles]
+				}
+				return allUploadedFiles
+			})
 
 			if (onFileSelect) {
-				onFileSelect(fileUrl)
+				allUploadedFiles.forEach((fileUrl) => {
+					onFileSelect(fileUrl)
+				})
 			}
 		},
 		onError: (error) => {
@@ -45,15 +53,15 @@ export const useUpload: TypeUpload = (folder, onFileSelect) => {
 	)
 
 	const removeFile = useCallback(() => {
-		setUploadedFile(null)
+		setUploadedFiles(null)
 	}, [])
 
 	return useMemo(
 		() => ({
 			uploadFile,
 			removeFile,
-			uploadedFile,
+			uploadedFiles,
 		}),
-		[uploadFile, removeFile, uploadedFile]
+		[uploadFile, removeFile, uploadedFiles]
 	)
 }

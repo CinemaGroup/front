@@ -5,4 +5,5 @@ export type TypeFile = {
 
 export type TypeFileFilters = {
 	folder?: string
+	searchTerm?: string
 }

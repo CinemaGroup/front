@@ -1,0 +1,45 @@
+.products {
+	@apply flex flex-wrap items-start gap-7;
+}
+.product {
+	@apply w-full flex flex-col justify-between;
+	max-width: calc(100% / 4 - 18px);
+}
+.preview {
+	@apply relative bg-gray-700 aspect-square w-full rounded-medium;
+
+	> img {
+		@apply image-like-bg;
+	}
+}
+.favorite {
+	@apply absolute z-1 right-3.5 bottom-3;
+}
+.link {
+	@apply inline-block w-full h-full;
+}
+.name {
+	@apply text-white font-RoadRadio mt-4 mb-3;
+}
+.excerpt {
+	@apply mb-5;
+}
+.priceBox {
+	@apply uppercase font-RoadRadio mb-6 flex flex-col items-start;
+}
+.retail {
+	@apply w-full flex items-center gap-2 justify-between mb-0.5;
+}
+.oldPrice {
+	@apply text-small text-gray-500 line-through;
+}
+.sale {
+	@apply flex items-center justify-center bg-red-300 rounded-medium text-white py-0.5 px-1;
+	font-size: 8px;
+}
+.price {
+	@apply text-white text-4lg;
+}
+.buy {
+	padding: 15px 34px;
+}

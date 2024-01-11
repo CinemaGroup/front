@@ -11,6 +11,7 @@ const Language: FC<ILanguage> = ({ className }) => {
 	return (
 		<div className={cn(styles.language, className && className)}>
 			<CustomSelect
+				listClassName={styles.selectList}
 				data={LANGUAGE_DATA}
 				onChange={() => console.log('language changed')}
 				value={LANGUAGE_DATA[0]}

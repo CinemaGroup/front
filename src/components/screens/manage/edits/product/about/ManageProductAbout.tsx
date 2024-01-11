@@ -17,7 +17,7 @@ const ManageProductAbout: FC<IManageProductControl> = ({ control }) => {
 		<div className={styles.aboutWrapper}>
 			<SubHeading>Для чего нужен</SubHeading>
 			{fields.map((field, index) => (
-				<div className={styles.about}>
+				<div key={index} className={styles.about}>
 					<Controller
 						name={`about.${index}.title`}
 						control={control}

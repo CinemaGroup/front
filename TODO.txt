@@ -1,17 +1,11 @@
-Use Upload Hook
-optimizacnel u jnjel chogtagorcvox kody
+folder edit
 
-Drag and Drop Hook
-jnjel chogtagorcvox kody
+product -> videoPoster
 
+product -> variations -> variation -> image
+product -> principles -> principlesItem -> imagePath
+product -> gets -> getsItem -> imagePath
 
-dzel jnjely fileri - +
-avelacnel folderi jnjely - +
-
-dzel services variations-i meji
-dzel для чего нужно
-dzel henc mtumes update uje sarqac produkti hamar, selectnery valunery chen pahum - +
-
-
-media
-tel auth
+productCategory -> imagePath
+								-> backgroundImage
+								-> phoneImage

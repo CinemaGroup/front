@@ -4,11 +4,11 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Dispatch, SetStateAction, useState } from 'react'
 
 export const useDragAndDrop = (
-	setFile: Dispatch<SetStateAction<File | undefined>>
+	setFiles: Dispatch<SetStateAction<File[] | undefined>>
 ) => {
 	const [dragOver, setDragOver] = useState(false)
 	const [fileDropError, setFileDropError] = useState('')
-	const [selectedFile, setSelectedFile] = useState<File>()
+	const [selectedFiles, setSelectedFiles] = useState<File[]>()
 	const [selectedFolder, setSelectedFolder] = useState<string>('images')
 	const [dropped, setDropped] = useState(false)
 	const queryClient = useQueryClient()
@@ -20,7 +20,7 @@ export const useDragAndDrop = (
 			queryClient.invalidateQueries({ queryKey: ['get files'] })
 			queryClient.invalidateQueries({ queryKey: ['get file directories'] })
 			setDropped(false)
-			setSelectedFile(undefined)
+			setSelectedFiles(undefined)
 			setSelectedFolder('images')
 		},
 		onError: (error) => {
@@ -36,19 +36,25 @@ export const useDragAndDrop = (
 	const onDragLeave = () => setDragOver(false)
 
 	const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
-		e.preventDefault()
-
-		setDragOver(false)
-		setDropped(true)
-
-		const selectedFile = e?.dataTransfer?.files[0]
-
-		if (selectedFile.type.split('/')[0] !== 'image') {
-			return setFileDropError('Please provide an image file to upload!')
+		e.preventDefault();
+	
+		setDragOver(false);
+		setDropped(true);
+	
+		const selectedFiles = e?.dataTransfer?.files;
+	
+		if (!selectedFiles || selectedFiles.length === 0) {
+			return setFileDropError('No files provided!');
 		}
-
-		setFile(selectedFile)
-	}
+	
+		for (let i = 0; i < selectedFiles.length; i++) {
+			if (selectedFiles[i].type.split('/')[0] !== 'image') {
+				return setFileDropError('Please provide only image files to upload!');
+			}
+		}
+	
+		setFiles(Array.from(selectedFiles));
+	};
 
 	return {
 		dropped,
@@ -60,7 +66,7 @@ export const useDragAndDrop = (
 		onDrop,
 		setSelectedFolder,
 		selectedFolder,
-		selectedFile,
+		selectedFiles,
 		fileDropError,
 		mutateAsync,
 		setFileDropError,

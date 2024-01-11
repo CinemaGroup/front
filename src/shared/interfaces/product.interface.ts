@@ -1,3 +1,7 @@
+import { IProductCategory } from './product-category.interface'
+import { IProductGroup } from './product-group.interface'
+import { IProductType } from './product-type.interface'
+
 export interface IProductServiceItem {
 	title: string
 	price: number
@@ -52,11 +56,14 @@ export interface IProduct {
 	slug: string
 	description: string
 	videoPoster?: string
-	videoPath: string
+	videoPath?: string
 	variations: IProductVariation[]
 	about: IProductAbout[]
 	principles: IProductPrinciple[]
 	gets: IProductGet[]
+	productCategory: IProductCategory
+	productGroup: IProductGroup
+	productType: IProductType
 	views: number
 	createdAt: string
 }

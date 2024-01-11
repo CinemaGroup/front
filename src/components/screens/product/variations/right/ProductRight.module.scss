@@ -1,0 +1,93 @@
+.product {
+	@apply w-full;
+	max-width: 800px;
+}
+.thumbnail {
+	@apply relative;
+}
+.fill {
+	@apply flex items-stretch mb-10;
+	gap: 70px;
+}
+.left {
+	@apply w-full;
+}
+.right {
+	@apply w-full flex flex-col;
+	max-width: 315px;
+}
+.thumbnail {
+	@apply relative w-full aspect-square rounded-medium bg-gray-700;
+
+	> img {
+		@apply image-like-bg;
+	}
+}
+.favorite {
+	@apply absolute z-1;
+	right: 30px;
+	bottom: 24px;
+}
+.description {
+	@apply text-extra-small mb-5;
+}
+.select {
+	@apply mb-4;
+}
+.selectList {
+	@apply w-full bg-gray-800 rounded-extra-small rounded-tl-none rounded-tr-none border border-solid border-gray-600 border-t-0;
+	top: calc(100% - 3px);
+
+	button {
+		@apply w-full py-4 px-6;
+	}
+}
+.selectItem {
+	@apply transition-transform;
+
+	&:hover {
+		@apply bg-gray-700;
+	}
+
+	&:last-child {
+		@apply rounded-b-extra-small;
+	}
+}
+.selectItemActive {
+	@apply bg-gray-700;
+}
+.selectBtn {
+	@apply relative w-full py-4 px-6 border border-solid border-gray-600 rounded-extra-small;
+}
+.selectToggle {
+	@apply absolute top-0 bottom-0 my-auto h-fit;
+	right: 20px;
+}
+.rating {
+	@apply mt-auto mb-2;
+}
+.priceBox {
+	@apply uppercase font-RoadRadio mb-4 flex flex-col items-start font-bold;
+}
+.retail {
+	@apply w-full flex items-center gap-4;
+}
+.oldPrice {
+	@apply text-5lg text-gray-500 line-through;
+}
+.sale {
+	@apply flex items-center justify-center bg-red-300 rounded-medium text-white py-1 px-2;
+	font-size: 15px;
+}
+.price {
+	@apply text-white text-title leading-none;
+}
+.info {
+	@apply flex flex-col gap-2;
+}
+.infoItem {
+	@apply flex items-center gap-3;
+}
+.similar {
+	@apply mt-14;
+}

@@ -24,7 +24,7 @@
 	@apply mt-5 relative;
 
 	> img {
-		@apply image-like-bg rounded-md;
+		@apply object-contain rounded-md;
 	}
 
 	&.active {

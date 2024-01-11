@@ -1,0 +1,52 @@
+.wrapper {
+	@apply bg-gray-700 py-20;
+}
+.inner {
+	@apply flex items-center justify-between gap-20;
+}
+.left {
+	@apply w-full;
+	max-width: 630px;
+}
+.title {
+	@apply font-RoadRadio font-bold text-white text-title;
+	margin-bottom: 55px;
+}
+.right {
+	@apply text-gray-800 flex items-center rounded-medium bg-gray-200;
+	border: 1px solid #999;
+	padding: 50px 85px 50px 0;
+}
+.preview {
+	@apply w-full relative aspect-square;
+	width: 455px;
+}
+.composition {
+	@apply mb-4;
+}
+.rating {
+	@apply mb-3;
+}
+.bought {
+	@apply flex items-center gap-3.5;
+}
+.priceBox {
+	@apply mt-10 uppercase font-RoadRadio mb-7 flex flex-col items-start font-bold;
+}
+.retail {
+	@apply w-full flex items-center gap-3;
+}
+.oldPrice {
+	@apply text-2lg text-gray-500 line-through;
+}
+.sale {
+	@apply flex items-center justify-center bg-red-300 rounded-medium text-white py-1 px-2;
+	font-size: 12px;
+}
+.price {
+	@apply leading-none text-12lg;
+}
+.buy {
+	@apply text-2lg;
+	padding: 16px 56px;
+}

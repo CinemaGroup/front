@@ -44,12 +44,6 @@ const CatalogProductsItem: FC<{ product: IProduct }> = ({ product }) => {
 			</div>
 			<Link className={styles.link} href={`/product/${product.slug}`}>
 				<h3 className={styles.name}>{product.name}</h3>
-				<p
-					className={styles.excerpt}
-					dangerouslySetInnerHTML={{
-						__html: descriptionToExcerpt(product.description, 50),
-					}}
-				/>
 				<div className={styles.priceBox}>
 					{product.variations[0].salePrice ? (
 						<>

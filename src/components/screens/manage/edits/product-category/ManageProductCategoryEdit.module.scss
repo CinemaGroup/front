@@ -7,6 +7,10 @@
 .subtitle {
 	@apply mb-3;
 }
-.form{
+.form {
 	@apply flex flex-wrap items-start gap-8;
+}
+.file {
+	@apply w-full;
+	max-width: calc(33% - 16px);
 }

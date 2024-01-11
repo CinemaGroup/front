@@ -5,9 +5,31 @@
 		@apply w-5 mr-2;
 	}
 }
+.selectList {
+	@apply py-4 p-4 right-0 bg-gray-700;
+	min-width: 100px;
+	top: calc(100% + 1rem);
+
+	> li {
+		@apply rounded-lg;
+		font-size: 15px;
+
+		& + li {
+			@apply mt-2.5;
+		}
+	}
+}
 
 @media (max-width: 700px) {
 	.language {
 		@apply text-extra-small;
+	}
+}
+
+@media (max-width: 700px) {
+	.selectList {
+		> li {
+			@apply text-extra-small;
+		}
 	}
 }

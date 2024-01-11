@@ -76,7 +76,7 @@ const ManageProductGeneral: FC<IManageProductControl> = ({ control }) => {
 					}}
 				/>
 				<Controller
-					name="videoPoster"
+					name='videoPoster'
 					control={control}
 					defaultValue=""
 					render={({ field: { value, onChange }, fieldState: { error } }) => (
@@ -99,13 +99,10 @@ const ManageProductGeneral: FC<IManageProductControl> = ({ control }) => {
 							className={styles.field}
 							onChange={onChange}
 							value={value}
-							label="Ссылка на видео"
+							label="Ссылка на видео (Необязательно)"
 							error={error}
 						/>
 					)}
-					rules={{
-						required: 'Видео обязательное поле!',
-					}}
 				/>
 				<Controller
 					name={`productCategoryId`}

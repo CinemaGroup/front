@@ -1,0 +1,38 @@
+.about {
+	@apply relative w-full overflow-x-clip flex;
+	min-height: 550px;
+
+	> img {
+		@apply -z-1 image-like-bg;
+	}
+}
+.inner {
+	@apply absolute top-0 bottom-0 left-0 right-0 w-full h-full;
+	background: rgba(33, 33, 33, 0.7);
+}
+.fill {
+	max-width: 1100px;
+	padding: 92px 0 71px;
+}
+.item {
+	max-width: 460px;
+	@apply w-full;
+}
+.title {
+	@apply font-RoadRadio font-bold text-title text-white;
+	margin-bottom: 70px;
+}
+.items {
+	@apply flex flex-wrap gap-20;
+}
+.itemTitle {
+	@apply text-white font-RoadRadio font-bold flex items-start gap-20;
+	font-size: 25px;
+	margin-bottom: 30px;
+}
+.phone {
+	@apply absolute top-0 w-full;
+	max-width: 620px;
+	right: -70px;
+	top: -50px;
+}

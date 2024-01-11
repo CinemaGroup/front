@@ -21,7 +21,10 @@ const TypesItem: FC<{ type: IType }> = ({ type }) => {
 				<h2 className={styles.name} style={{ color: type.color }}>
 					{type.name}
 				</h2>
-				<p className={styles.description}>{type.description}</p>
+				<div
+					className={styles.description}
+					dangerouslySetInnerHTML={{ __html: type.description }}
+				/>
 			</div>
 			<Icon name="ArrowLeft" />
 		</Link>

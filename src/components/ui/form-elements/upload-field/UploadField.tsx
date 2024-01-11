@@ -24,7 +24,7 @@ const UploadField: FC<IUploadField> = ({
 	}
 
 	const handleRemoveFile = () => {
-		onChange(undefined)
+		onChange(null)
 	}
 
 	return (
@@ -75,13 +75,15 @@ const UploadField: FC<IUploadField> = ({
 					</div>
 				)}
 			</div>
-			<Modal
-				isOpen={isOpen}
-				closeModal={() => setIsOpen(false)}
-				className={styles.modal}
-			>
-				<Storage onFileSelect={handleFileSelect} />
-			</Modal>
+			{isOpen && (
+				<Modal
+					isOpen={isOpen}
+					closeModal={() => setIsOpen(false)}
+					className={styles.modal}
+				>
+					<Storage onFileSelect={handleFileSelect} />
+				</Modal>
+			)}
 		</div>
 	)
 }

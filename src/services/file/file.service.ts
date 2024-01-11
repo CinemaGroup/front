@@ -13,10 +13,10 @@ export const FileService = {
 		return instance.get<string[]>(getFilesUrl('/directories'))
 	},
 
-	async upload(file: FormData, folder?: string) {
+	async upload(formData: FormData, folder?: string) {
 		return instance.post<{ url: string; name: string }[]>(
 			getFilesUrl(''),
-			file,
+			formData,
 			{
 				params: { folder },
 				headers: { 'Content-Type': 'multipart/form-data' },

@@ -9,25 +9,18 @@
 	}
 }
 .list {
-	@apply absolute right-0 z-2 py-4 p-4 bg-gray-700;
+	@apply animate-fade absolute z-2;
 	border-radius: 10px;
-	top: calc(100% + 1rem);
-	min-width: 100px;
 }
 .item {
-	@apply block w-full rounded-lg;
-	font-size: 15px;
-
-	& + & {
-		@apply mt-2.5;
-	}
+	@apply block w-full;
 }
 .button {
-	@apply flex items-center gap-1;
+	@apply w-full flex items-center gap-1;
 }
-
-@media(max-width: 700px){
-	.item {
-		@apply text-extra-small;
-	}
+.toggle {
+	@apply transition-transform;
+}
+.toggleActive {
+	@apply rotate-180;
 }

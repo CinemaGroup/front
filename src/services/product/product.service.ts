@@ -1,5 +1,6 @@
 import { axiosClassic, instance } from '@/api/api.interceptors'
 import { getProductsUrl } from '@/config/api.config'
+import { IProduct } from '@/shared/interfaces/product.interface'
 import {
 	ProductDataFilters,
 	TypeCollectionProducts,
@@ -21,6 +22,22 @@ export const ProductService = {
 				params: queryData,
 			}
 		)
+	},
+
+	async getBySlug(slug: string) {
+		const result = await axiosClassic.get<IProduct>(
+			getProductsUrl(`/by-slug/${slug}`)
+		)
+
+		return result.data
+	},
+
+	async getSimilar(slug: string) {
+		const result = await axiosClassic.get<IProduct[]>(
+			getProductsUrl(`/similar/${slug}`)
+		)
+
+		return result.data
 	},
 
 	// Admin Place

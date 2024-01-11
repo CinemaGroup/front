@@ -53,12 +53,54 @@ const ManageProductCategoryEdit: FC<{ queryId: string }> = ({ queryId }) => {
 									onChange={onChange}
 									value={value}
 									error={error}
-									label="Выберите картинку"
+									label="Выберите иконку"
 									variant="thumbnail"
 								/>
 							)}
 							rules={{
 								required: 'Картинка обязательное поле!',
+							}}
+						/>
+						<Controller
+							name="backgroundImage"
+							control={control}
+							defaultValue=""
+							render={({
+								field: { value, onChange },
+								fieldState: { error },
+							}) => (
+								<UploadField
+									className={styles.file}
+									onChange={onChange}
+									value={value}
+									error={error}
+									label="Выберите фоновую картинку для внутр. стр. продукта"
+									variant="poster"
+								/>
+							)}
+							rules={{
+								required: 'Фоновая картинка обязательное поле!',
+							}}
+						/>
+						<Controller
+							name="phoneImage"
+							control={control}
+							defaultValue=""
+							render={({
+								field: { value, onChange },
+								fieldState: { error },
+							}) => (
+								<UploadField
+									className={styles.file}
+									onChange={onChange}
+									value={value}
+									error={error}
+									label="Выберите картинку телефона"
+									variant="poster"
+								/>
+							)}
+							rules={{
+								required: 'Картинка телефона обязательное поле!',
 							}}
 						/>
 						<Button variant="light" className={styles.update}>

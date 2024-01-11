@@ -52,7 +52,7 @@ export type TypeProductInput = {
 	name: string
 	description: string
 	videoPoster?: string
-	videoPath: string
+	videoPath?: string
 	variations: TypeProductVariationInput[]
 	about: TypeProductAboutInput[]
 	principles: TypeProductPrincipleInput[]

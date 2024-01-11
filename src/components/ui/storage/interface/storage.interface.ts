@@ -25,7 +25,7 @@ export interface IStorageAddFolder {
 }
 
 export interface IStorageSelectFolder {
-	file: File | undefined
+	files: File[] | undefined
 	isShow: boolean
 	setIsShow: Dispatch<SetStateAction<boolean>>
 	setSelectedFolder: Dispatch<SetStateAction<string>>

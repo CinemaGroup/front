@@ -2,6 +2,8 @@ import Icon from '@/components/ui/icon/Icon'
 import { TypeIcon } from '@/shared/types/globals.type'
 import Image from 'next/image'
 
+// TODO: problem with types
+
 export const renderIcon = (icon: TypeIcon) => {
 	if (typeof icon === 'string') {
 		return <Icon name={icon} />

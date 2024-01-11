@@ -58,7 +58,8 @@ const config: Config = {
 				300: '#FF1616',
 			},
 			blue: {
-				300: 'rgba(60, 193, 212, 1)'
+				300: 'rgba(60, 193, 212, 1)',
+				200: 'rgba(171, 255, 255, 1)',
 			}
 		},
 		extend: {
@@ -78,6 +79,7 @@ const config: Config = {
 				'9lg': '38px',
 				'10lg': '40px',
 				'11lg': '42px',
+				'12lg': '44px',
 				title: '55px',
 			},
 			borderRadius: {

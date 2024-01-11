@@ -1,0 +1,13 @@
+.wrapper {
+	margin-bottom: 240px;
+}
+.title {
+	@apply font-RoadRadio font-bold text-white text-title mb-10;
+}
+.video {
+	@apply w-full aspect-video;
+
+	iframe:focus-visible {
+		@apply outline-border-none;
+	}
+}

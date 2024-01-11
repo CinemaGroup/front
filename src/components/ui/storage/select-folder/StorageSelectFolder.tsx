@@ -6,7 +6,7 @@ import styles from '../Storage.module.scss'
 import { IStorageSelectFolder } from '../interface/storage.interface'
 
 const StorageSelectFolder: FC<IStorageSelectFolder> = ({
-	file,
+	files,
 	isShow,
 	setDropped,
 	setIsShow,
@@ -42,9 +42,11 @@ const StorageSelectFolder: FC<IStorageSelectFolder> = ({
 									onClick={() => {
 										setSelectedFolder(directory)
 										setIsShow(false)
-										if (file) {
+										if (files) {
 											const formData = new FormData()
-											formData.append('file', file)
+											for (const file of files) {
+												formData.append('files', file)
+											}
 											mutateAsync(formData)
 										}
 									}}

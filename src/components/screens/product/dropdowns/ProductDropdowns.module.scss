@@ -1,0 +1,45 @@
+.dropdowns {
+	padding: 86px 0 120px;
+}
+.wrapper {
+	@apply flex flex-col;
+}
+.title {
+	@apply py-4 border-b border-b-gray-600 border-solid flex items-center gap-7 font-RoadRadio text-white text-title uppercase;
+
+	> svg {
+		@apply w-10 h-10;
+	}
+}
+.box {
+	@apply flex flex-wrap animate-fade;
+	row-gap: 88px;
+	column-gap: 115px;
+	padding-top: 62px;
+}
+.principlesBox {
+	padding-bottom: 113px;
+}
+.item {
+	@apply flex items-center;
+	gap: 52px;
+}
+.info {
+	@apply w-full;
+	max-width: 440px;
+}
+.preview {
+	@apply relative;
+	min-width: 52px;
+	min-height: 52px;
+	max-width: 52px;
+	max-height: 52px;
+
+	> img {
+		@apply w-full h-full;
+	}
+}
+.itemTitle {
+	@apply text-white font-bold font-RoadRadio mb-5;
+	font-size: 25px;
+}
