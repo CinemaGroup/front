@@ -23,11 +23,11 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://back.media-building.ru/api/:path*',
+				destination: 'http://82.97.243.54:4200/api/:path*',
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://back.media-building.ru/uploads/:path*',
+				destination: 'http://82.97.243.54:4200/uploads/:path*',
 			},
 		]
 	},
